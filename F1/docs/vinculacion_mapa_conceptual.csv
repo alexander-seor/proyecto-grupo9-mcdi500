@@ -1,0 +1,11 @@
+﻿elemento_del_mapa,estado,evidencia
+Delimitar el problema,Implementado,F1_Definicion.ipynb y README.md
+Validar y describir los datos,Implementado,validador.ipynb e informe_dataset.md
+Preservar los datos originales,Implementado,F1/data/raw/ai4i2020.csv
+Guardar datos procesados,Proyectado para F2,F1/data/processed/
+Preparar el entorno reproducible,Implementado,".venv, requirements.txt y kernel del proyecto"
+Analizar en Jupyter,Parcial,Reconocimiento inicial en F1; preparación y exploración en F2
+Documentar la evidencia,Implementado,"README.md, notebooks y F1/docs/"
+Registrar cambios con Git,Implementado,Historial de commits del repositorio
+Colaborar mediante GitHub,Adaptado a trabajo individual,Repositorio remoto personal
+Modelar y evaluar,Proyectado,Fases 3 y 4

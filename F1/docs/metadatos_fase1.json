@@ -1,0 +1,28 @@
+{
+  "proyecto": "Mantenimiento predictivo con AI4I 2020",
+  "grupo": "Grupo 9",
+  "integrantes": [
+    "Alexander Sepulveda Ormazabal"
+  ],
+  "fase": "F1",
+  "fecha_ejecucion": "2026-09-27",
+  "semilla": 42,
+  "python": "3.13.0",
+  "sistema": "Windows 11",
+  "interprete": "C:\\proyecto-grupo9-mcdi500\\.venv\\Scripts\\python.exe",
+  "entorno_virtual": true,
+  "dependencias": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.2",
+    "sklearn": "1.9.1"
+  },
+  "dataset": {
+    "titulo": "AI4I 2020 Predictive Maintenance Dataset",
+    "archivo": "F1/data/raw/ai4i2020.csv",
+    "filas": 10000,
+    "columnas": 14,
+    "licencia": "CC BY 4.0",
+    "doi": "https://doi.org/10.24432/C5HS5C"
+  }
+}

@@ -1,0 +1,9 @@
+﻿estado,requisito,detalle
+OK,Al menos 2000 filas,10000 filas
+OK,Al menos 12 columnas,14 columnas
+OK,Al menos 3 roles analíticos,"binaria, continua, discreta, nominal"
+OK,Al menos una variable numérica,5 variables
+OK,Al menos una variable categórica,7 variables
+OK,Ninguna variable supera 60% de nulos,máximo 0.0%
+OK,Archivo menor de 100 MB,0.5 MB
+OK,Sin filas duplicadas exactas,0 duplicadas

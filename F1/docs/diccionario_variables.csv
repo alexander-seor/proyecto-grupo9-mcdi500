@@ -1,0 +1,15 @@
+﻿variable,rol_analitico,descripcion,unidad,uso_como_predictor
+UDI,identificador,Identificador único del registro,,No
+Product ID,identificador,Identificador del producto,,No
+Type,nominal,"Tipo de producto: L, M o H",,Sí
+Air temperature [K],continua,Temperatura del aire,K,Sí
+Process temperature [K],continua,Temperatura del proceso,K,Sí
+Rotational speed [rpm],continua,Velocidad de rotación,rpm,Sí
+Torque [Nm],continua,Torque aplicado,Nm,Sí
+Tool wear [min],discreta,Desgaste acumulado de la herramienta,min,Sí
+Machine failure,binaria,Variable objetivo: 1 indica falla,,Objetivo
+TWF,binaria,Falla por desgaste de herramienta,,No
+HDF,binaria,Falla por disipación de calor,,No
+PWF,binaria,Falla de potencia,,No
+OSF,binaria,Falla por sobreesfuerzo,,No
+RNF,binaria,Falla aleatoria,,No

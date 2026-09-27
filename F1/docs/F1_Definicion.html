@@ -7795,12 +7795,458 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bfa4a82a-4b97-4f7f-9722-68202dad5131">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5f70cc85-077b-49b3-b2c3-136a85fe73d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h1 id="Notebook-de-definici%C3%B3n-del-problema-y-entorno-reproducible-%E2%80%94-Fase-1"&gt;Notebook de definición del problema y entorno reproducible — Fase 1<a class="anchor-link" href="#Notebook-de-definici%C3%B3n-del-problema-y-entorno-reproducible-%E2%80%94-Fase-1">¶</a>&lt;/h1&gt;&lt;p&gt;<strong>Proyecto:</strong> Mantenimiento predictivo con AI4I 2020&lt;br /&gt;
+<strong>Asignatura:</strong> Programación para la Ciencia de Datos&lt;br /&gt;
+<strong>Grupo:</strong> 9&lt;br /&gt;
+<strong>Integrante:</strong> Alexander Sepulveda Ormazabal&lt;/p&gt;
+&lt;h2 id="%C2%BFQu%C3%A9-produce-la-Fase-1?"&gt;¿Qué produce la Fase 1?<a class="anchor-link" href="#%C2%BFQu%C3%A9-produce-la-Fase-1?">¶</a>&lt;/h2&gt;&lt;p&gt;La Fase 1 establece las bases conceptuales y técnicas del proyecto. En ella se
+define el problema que será estudiado, se documenta el conjunto de datos, se
+comprueba el entorno de ejecución y se organiza el repositorio que sostendrá
+las fases posteriores.&lt;/p&gt;
+&lt;p&gt;El flujo de este cuaderno es:&lt;/p&gt;
+&lt;p&gt;<strong>Definir → Configurar → Verificar → Estructurar → Documentar → Versionar</strong>&lt;/p&gt;
+&lt;p&gt;La Fase 1 reconoce y valida inicialmente los datos, pero no realiza su limpieza,
+imputación, codificación ni escalamiento. Esas tareas corresponden a la Fase 2.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a4268921-0aeb-4383-ad7c-860e252ca762">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="Introducci%C3%B3n"&gt;Introducción<a class="anchor-link" href="#Introducci%C3%B3n">¶</a>&lt;/h2&gt;&lt;p&gt;Las fallas inesperadas en maquinaria industrial pueden generar interrupciones
+operacionales, pérdidas de productividad y mayores necesidades de mantenimiento.
+El conjunto de datos AI4I 2020 contiene información sobre condiciones de operación
+de maquinaria, como temperatura, velocidad de rotación, torque y desgaste de
+herramienta, además del registro de ocurrencia de fallas.&lt;/p&gt;
+&lt;p&gt;El proyecto busca estudiar la relación entre estas condiciones operacionales y
+las fallas, identificar posibles patrones de riesgo y evaluar posteriormente si
+las variables disponibles permiten anticipar su ocurrencia.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2c54ab7-3104-453f-9e12-0a6ae04f967e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="Problem%C3%A1tica"&gt;Problemática<a class="anchor-link" href="#Problem%C3%A1tica">¶</a>&lt;/h2&gt;&lt;p&gt;Las fallas inesperadas en maquinaria industrial pueden ocasionar detenciones no
+planificadas, pérdidas de productividad y mayores necesidades de mantenimiento.
+Aunque existen mediciones de las condiciones de operación de los equipos, es
+necesario determinar cuáles de ellas se relacionan con la ocurrencia de fallas.&lt;/p&gt;
+&lt;p&gt;El proyecto utilizará el conjunto de datos AI4I 2020 para estudiar variables como
+la temperatura del aire y del proceso, la velocidad de rotación, el torque, el
+desgaste de herramienta y el tipo de producto. A partir de estos datos se buscará
+identificar condiciones operacionales asociadas con fallas y posibles patrones
+de riesgo, considerando que el conjunto es sintético y que las asociaciones
+observadas no demuestran por sí solas relaciones causales.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=39497211-9855-455f-a62d-96d9ceda75a0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="Pregunta-de-investigaci%C3%B3n"&gt;Pregunta de investigación<a class="anchor-link" href="#Pregunta-de-investigaci%C3%B3n">¶</a>&lt;/h2&gt;<blockquote>
+&lt;p&gt;¿Qué condiciones operacionales están asociadas con la ocurrencia de fallas en
+maquinaria industrial y en qué medida estas variables permiten identificar
+situaciones de riesgo de falla?&lt;/p&gt;
+</blockquote>
+<blockquote>
+&lt;h2 id="Objetivo-general"&gt;Objetivo general<a class="anchor-link" href="#Objetivo-general">¶</a>&lt;/h2&gt;</blockquote>
+&lt;p&gt;Analizar la relación entre las condiciones operacionales de la maquinaria
+industrial y la ocurrencia de fallas mediante el conjunto de datos AI4I 2020,
+con el propósito de identificar posibles patrones de riesgo y evaluar
+posteriormente la capacidad de estas variables para anticipar fallas.&lt;/p&gt;
+&lt;h2 id="Objetivos-espec%C3%ADficos"&gt;Objetivos específicos<a class="anchor-link" href="#Objetivos-espec%C3%ADficos">¶</a>&lt;/h2&gt;<ol>
+<li>&lt;p&gt;Caracterizar las variables operacionales y la variable de falla presentes
+en el conjunto de datos AI4I 2020.&lt;/p&gt;
+</li>
+<li>&lt;p&gt;Evaluar la calidad inicial del conjunto mediante la revisión de sus
+dimensiones, tipos de datos, valores faltantes, duplicados, rangos y
+distribución de la variable objetivo.&lt;/p&gt;
+</li>
+<li>&lt;p&gt;Preparar un conjunto de datos consistente y reproducible, justificando las
+decisiones de limpieza, selección y transformación aplicadas en la Fase 2.&lt;/p&gt;
+</li>
+<li>&lt;p&gt;Explorar la relación entre la temperatura, la velocidad de rotación, el
+torque, el desgaste de herramienta, el tipo de producto y la ocurrencia
+de fallas.&lt;/p&gt;
+</li>
+<li>&lt;p&gt;Evaluar en las fases posteriores si las variables operacionales permiten
+reconocer situaciones con mayor riesgo de falla.&lt;/p&gt;
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c2342901-42e7-4d03-9f0b-0d31e5f2ebac">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="Herramientas-del-proyecto"&gt;Herramientas del proyecto<a class="anchor-link" href="#Herramientas-del-proyecto">¶</a>&lt;/h2&gt;&lt;p&gt;En esta sección se importan las librerías y los módulos necesarios para verificar
+el entorno, documentar el conjunto de datos y consultar el estado del repositorio.&lt;/p&gt;
+&lt;p&gt;También se establece una semilla fija para que cualquier procedimiento que
+incorpore aleatoriedad pueda repetirse bajo las mismas condiciones.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=eef4748b-1c30-4dae-9aec-c4e71a1d833f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">platform</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Semilla compartida por las distintas fases del proyecto.</span>
+<span class="n">SEMILLA</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">SEMILLA</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Cuaderno de la Fase 1 · Grupo 9 ·"</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Semilla declarada:"</span><span class="p">,</span> <span class="n">SEMILLA</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Cuaderno de la Fase 1 · Grupo 9 · 2026-09-27
+Semilla declarada: 42
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cac660d6-edf2-4b1e-8bba-86417a37c130">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="1.-Definici%C3%B3n-del-problema"&gt;1. Definición del problema<a class="anchor-link" href="#1.-Definici%C3%B3n-del-problema">¶</a>&lt;/h2&gt;&lt;p&gt;Esta sección registra la problemática, las preguntas, los objetivos, el alcance
+y las limitaciones del proyecto en una estructura de datos.&lt;/p&gt;
+&lt;p&gt;La información coincide con la definición presentada anteriormente, pero se
+organiza como un diccionario de Python para poder reutilizarla posteriormente
+en las validaciones y en los metadatos del proyecto.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=717b020a-b0e4-4001-9df2-b60c18633b8e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">PROYECTO</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"titulo"</span><span class="p">:</span> <span class="s2">"Mantenimiento predictivo con AI4I 2020"</span><span class="p">,</span>
+    <span class="s2">"grupo"</span><span class="p">:</span> <span class="s2">"Grupo 9"</span><span class="p">,</span>
+    <span class="s2">"asignatura"</span><span class="p">:</span> <span class="s2">"MCDI500 · Programación para la Ciencia de Datos"</span><span class="p">,</span>
+    <span class="s2">"integrantes"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Alexander Sepulveda Ormazabal"</span><span class="p">],</span>
+
+    <span class="s2">"problematica"</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s2">"Las fallas inesperadas en maquinaria industrial pueden provocar "</span>
+        <span class="s2">"interrupciones operacionales, pérdidas de productividad y mayores "</span>
+        <span class="s2">"necesidades de mantenimiento. El proyecto busca estudiar qué "</span>
+        <span class="s2">"condiciones operacionales están asociadas con la ocurrencia de fallas."</span>
+    <span class="p">),</span>
+
+    <span class="s2">"objetivo_general"</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s2">"Analizar la relación entre las condiciones operacionales de la "</span>
+        <span class="s2">"maquinaria industrial y la ocurrencia de fallas mediante el conjunto "</span>
+        <span class="s2">"de datos AI4I 2020, con el propósito de identificar posibles patrones "</span>
+        <span class="s2">"de riesgo y evaluar posteriormente la capacidad de estas variables "</span>
+        <span class="s2">"para anticipar fallas."</span>
+    <span class="p">),</span>
+
+    <span class="s2">"objetivos_especificos"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"Caracterizar las variables operacionales y la variable de falla."</span><span class="p">,</span>
+        <span class="s2">"Evaluar la calidad inicial del conjunto de datos."</span><span class="p">,</span>
+        <span class="s2">"Preparar un conjunto de datos consistente y reproducible en la Fase 2."</span><span class="p">,</span>
+        <span class="s2">"Explorar la relación entre las condiciones operacionales y las fallas."</span><span class="p">,</span>
+        <span class="s2">"Evaluar posteriormente la capacidad de identificar situaciones de riesgo."</span><span class="p">,</span>
+    <span class="p">],</span>
+
+    <span class="s2">"preguntas"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"¿Qué consecuencias generan las fallas inesperadas en la maquinaria?"</span><span class="p">,</span>
+        <span class="s2">"¿Qué condiciones operacionales registra AI4I 2020?"</span><span class="p">,</span>
+        <span class="s2">"¿Qué variables podrían estar asociadas con un mayor riesgo de falla?"</span><span class="p">,</span>
+        <span class="s2">"¿Qué limitaciones presenta el conjunto de datos?"</span><span class="p">,</span>
+    <span class="p">],</span>
+
+    <span class="s2">"alcance"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"incluye"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">"Definición del problema"</span><span class="p">,</span>
+            <span class="s2">"Verificación del entorno reproducible"</span><span class="p">,</span>
+            <span class="s2">"Descripción y validación inicial del conjunto de datos"</span><span class="p">,</span>
+            <span class="s2">"Preparación de los datos en la Fase 2"</span><span class="p">,</span>
+            <span class="s2">"Análisis posterior de las condiciones asociadas con fallas"</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">"excluye"</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">"Interpretación causal de las asociaciones"</span><span class="p">,</span>
+            <span class="s2">"Validación directa en maquinaria industrial real"</span><span class="p">,</span>
+            <span class="s2">"Despliegue de un sistema de mantenimiento en producción"</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="s2">"limitaciones"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"AI4I 2020 es un conjunto de datos sintético."</span><span class="p">,</span>
+        <span class="s2">"Las asociaciones observadas no demuestran causalidad."</span><span class="p">,</span>
+        <span class="s2">"La variable objetivo presenta menos fallas que casos sin falla."</span><span class="p">,</span>
+        <span class="s2">"Los resultados obtenidos no garantizan desempeño en equipos reales."</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=addab3fd-e6c5-43bd-af5c-4c4bf75fa36d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="Presentaci%C3%B3n-y-verificaci%C3%B3n-de-la-definici%C3%B3n"&gt;Presentación y verificación de la definición<a class="anchor-link" href="#Presentaci%C3%B3n-y-verificaci%C3%B3n-de-la-definici%C3%B3n">¶</a>&lt;/h3&gt;&lt;p&gt;La función siguiente comprueba que la configuración contiene el título, la
+problemática, el objetivo general y los objetivos específicos. Después presenta
+la información principal del proyecto de forma ordenada.&lt;/p&gt;
+&lt;p&gt;La verificación permite detectar inmediatamente si falta algún elemento requerido.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=eaae0452-6362-4074-95b1-be1774f8d072">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">presentar_proyecto</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Comprueba y presenta la definición principal del proyecto.</span>
+
+<span class="sd">    Parámetros</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : dict</span>
+<span class="sd">        Diccionario con la configuración del proyecto.</span>
+
+<span class="sd">    Retorna</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    """</span>
+    <span class="n">obligatorias</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">"titulo"</span><span class="p">,</span>
+        <span class="s2">"problematica"</span><span class="p">,</span>
+        <span class="s2">"objetivo_general"</span><span class="p">,</span>
+        <span class="s2">"objetivos_especificos"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">faltantes</span> <span class="o">=</span> <span class="p">[</span><span class="n">clave</span> <span class="k">for</span> <span class="n">clave</span> <span class="ow">in</span> <span class="n">obligatorias</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">clave</span><span class="p">)]</span>
+
+    <span class="k">if</span> <span class="n">faltantes</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Faltan elementos obligatorios en la configuración: </span><span class="si">{</span><span class="n">faltantes</span><span class="si">}</span><span class="s2">"</span>
+        <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">"titulo"</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">'asignatura'</span><span class="p">]</span><span class="si">}</span><span class="s2"> · </span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">'grupo'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Problemática"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">"problematica"</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Objetivo general"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">"objetivo_general"</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Objetivos específicos"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">numero</span><span class="p">,</span> <span class="n">objetivo</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+        <span class="n">config</span><span class="p">[</span><span class="s2">"objetivos_especificos"</span><span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">numero</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">objetivo</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Preguntas que orientan el proyecto"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">pregunta</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s2">"preguntas"</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  · </span><span class="si">{</span><span class="n">pregunta</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1ffa2f80-07c9-44f6-bb0b-8d57371bd428">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">presentar_proyecto</span><span class="p">(</span><span class="n">PROYECTO</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>MANTENIMIENTO PREDICTIVO CON AI4I 2020
+============================================================
+MCDI500 · Programación para la Ciencia de Datos · Grupo 9
+
+Problemática
+Las fallas inesperadas en maquinaria industrial pueden provocar interrupciones operacionales, pérdidas de productividad y mayores necesidades de mantenimiento. El proyecto busca estudiar qué condiciones operacionales están asociadas con la ocurrencia de fallas.
+
+Objetivo general
+Analizar la relación entre las condiciones operacionales de la maquinaria industrial y la ocurrencia de fallas mediante el conjunto de datos AI4I 2020, con el propósito de identificar posibles patrones de riesgo y evaluar posteriormente la capacidad de estas variables para anticipar fallas.
+
+Objetivos específicos
+  1. Caracterizar las variables operacionales y la variable de falla.
+  2. Evaluar la calidad inicial del conjunto de datos.
+  3. Preparar un conjunto de datos consistente y reproducible en la Fase 2.
+  4. Explorar la relación entre las condiciones operacionales y las fallas.
+  5. Evaluar posteriormente la capacidad de identificar situaciones de riesgo.
+
+Preguntas que orientan el proyecto
+  · ¿Qué consecuencias generan las fallas inesperadas en la maquinaria?
+  · ¿Qué condiciones operacionales registra AI4I 2020?
+  · ¿Qué variables podrían estar asociadas con un mayor riesgo de falla?
+  · ¿Qué limitaciones presenta el conjunto de datos?
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=35de2d6b-a285-41cf-a371-3925ae8d0b39">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="Alcance-y-limitaciones"&gt;Alcance y limitaciones<a class="anchor-link" href="#Alcance-y-limitaciones">¶</a>&lt;/h3&gt;&lt;p&gt;El alcance establece qué actividades forman parte del proyecto y cuáles quedan
+fuera. Las limitaciones indican las condiciones que deben considerarse al
+interpretar los resultados.&lt;/p&gt;
+&lt;p&gt;Declarar estos elementos evita atribuir al análisis conclusiones que los datos
+o el método no pueden respaldar&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=375f8794-be76-4be4-8138-e1620e4a0dbe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Alcance de la Fase 1"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"  Incluye:"</span><span class="p">,</span> <span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"alcance"</span><span class="p">][</span><span class="s2">"incluye"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"  Excluye:"</span><span class="p">,</span> <span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"alcance"</span><span class="p">][</span><span class="s2">"excluye"</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Limitaciones declaradas"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">lim</span> <span class="ow">in</span> <span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"limitaciones"</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  · </span><span class="si">{</span><span class="n">lim</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Alcance de la Fase 1
+  Incluye: Definición del problema, Verificación del entorno reproducible, Descripción y validación inicial del conjunto de datos, Preparación de los datos en la Fase 2, Análisis posterior de las condiciones asociadas con fallas
+  Excluye: Interpretación causal de las asociaciones, Validación directa en maquinaria industrial real, Despliegue de un sistema de mantenimiento en producción
+
+Limitaciones declaradas
+  · AI4I 2020 es un conjunto de datos sintético.
+  · Las asociaciones observadas no demuestran causalidad.
+  · La variable objetivo presenta menos fallas que casos sin falla.
+  · Los resultados obtenidos no garantizan desempeño en equipos reales.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4d4541c2-7f4b-40cd-800a-fd1a25883427">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="2.-Verificaci%C3%B3n-del-entorno-reproducible"&gt;2. Verificación del entorno reproducible<a class="anchor-link" href="#2.-Verificaci%C3%B3n-del-entorno-reproducible">¶</a>&lt;/h2&gt;&lt;p&gt;Antes de utilizar el conjunto de datos se comprueba que el notebook se ejecuta
+con el intérprete del entorno virtual del proyecto y que las librerías
+científicas necesarias están disponibles.&lt;/p&gt;
+&lt;p&gt;También se muestra la carpeta de trabajo porque las rutas relativas se resuelven
+desde esa ubicación. El intérprete debe encontrarse dentro de <code>.venv</code> y la
+carpeta de trabajo debe corresponder a la raíz del repositorio.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bfa4a82a-4b97-4f7f-9722-68202dad5131">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -7827,7 +8273,7 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Intérprete: C:\proyecto-grupo9-mcdi500\.venv\Scripts\python.exe
-Carpeta de trabajo: C:\proyecto-grupo9-mcdi500
+Carpeta de trabajo: C:\proyecto-grupo9-mcdi500\F1\notebooks
  numpy        2.5.3
  pandas       3.0.5
  matplotlib   3.11.2
@@ -7837,17 +8283,2181 @@ Carpeta de trabajo: C:\proyecto-grupo9-mcdi500
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5f70cc85-077b-49b3-b2c3-136a85fe73d6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9f70112f-d43c-4f89-b054-86ac736b5adb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">versiones_entorno</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">libreria</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"numpy"</span><span class="p">,</span> <span class="s2">"pandas"</span><span class="p">,</span> <span class="s2">"matplotlib"</span><span class="p">,</span> <span class="s2">"sklearn"</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">modulo</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">libreria</span><span class="p">)</span>
+        <span class="n">versiones_entorno</span><span class="p">[</span><span class="n">libreria</span><span class="p">]</span> <span class="o">=</span> <span class="n">modulo</span><span class="o">.</span><span class="n">__version__</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="n">versiones_entorno</span><span class="p">[</span><span class="n">libreria</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">ENTORNO</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"interprete"</span><span class="p">:</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span>
+    <span class="s2">"entorno_virtual"</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s2">".venv"</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span>
+        <span class="ow">or</span> <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span> <span class="o">!=</span> <span class="n">sys</span><span class="o">.</span><span class="n">base_prefix</span>
+    <span class="p">),</span>
+    <span class="s2">"carpeta_trabajo"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()),</span>
+    <span class="s2">"versiones"</span><span class="p">:</span> <span class="n">versiones_entorno</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Información del entorno guardada en ENTORNO."</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] Información del entorno guardada en ENTORNO.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=34a9a91f-fe8c-4cfd-82fb-2e28ddc36086">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="3.-Estructura-del-repositorio-y-artefactos"&gt;3. Estructura del repositorio y artefactos<a class="anchor-link" href="#3.-Estructura-del-repositorio-y-artefactos">¶</a>&lt;/h2&gt;&lt;p&gt;Esta etapa comprueba que el repositorio posee las carpetas y los archivos
+definidos para el proyecto.&lt;/p&gt;
+&lt;p&gt;La estructura ya fue creada previamente, por lo que el código no genera ni
+sobrescribe elementos. Solamente verifica su existencia y muestra su estado.
+Los datos originales se conservan en <code>F1/data/raw/</code>, mientras que los resultados
+derivados de la Fase 2 se almacenarán en <code>F1/data/processed/</code>.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1c8502e3-8352-4c88-84d2-fe0fa8093728">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Buscar la raíz del proyecto desde la carpeta actual o sus carpetas superiores.</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+<span class="n">RAIZ</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+    <span class="p">(</span>
+        <span class="n">carpeta</span>
+        <span class="k">for</span> <span class="n">carpeta</span> <span class="ow">in</span> <span class="p">[</span><span class="n">actual</span><span class="p">,</span> <span class="o">*</span><span class="n">actual</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">carpeta</span> <span class="o">/</span> <span class="s2">"README.md"</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">carpeta</span> <span class="o">/</span> <span class="s2">"F1/data/raw/ai4i2020.csv"</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+    <span class="p">),</span>
+    <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">if</span> <span class="n">RAIZ</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+        <span class="s2">"No se encontró la raíz del proyecto ni el archivo ai4i2020.csv."</span>
+    <span class="p">)</span>
+
+<span class="n">RUTAS_PROYECTO</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"datos originales"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/data/raw"</span><span class="p">,</span>
+    <span class="s2">"datos procesados"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/data/processed"</span><span class="p">,</span>
+    <span class="s2">"notebooks F1"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/notebooks"</span><span class="p">,</span>
+    <span class="s2">"documentación F1"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/docs"</span><span class="p">,</span>
+    <span class="s2">"código reutilizable F1"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/src"</span><span class="p">,</span>
+    <span class="s2">"fase 2"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F2"</span><span class="p">,</span>
+    <span class="s2">"fase 3"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F3"</span><span class="p">,</span>
+    <span class="s2">"fase 4"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F4"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">ARCHIVOS_PRINCIPALES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"README"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"README.md"</span><span class="p">,</span>
+    <span class="s2">"dependencias"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"requirements.txt"</span><span class="p">,</span>
+    <span class="s2">"reglas de Git"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">".gitignore"</span><span class="p">,</span>
+    <span class="s2">"dataset original"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/data/raw/ai4i2020.csv"</span><span class="p">,</span>
+    <span class="s2">"notebook de definición"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/notebooks/F1_Definicion.ipynb"</span><span class="p">,</span>
+    <span class="s2">"notebook validador"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/notebooks/validador.ipynb"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Carpeta inicial :"</span><span class="p">,</span> <span class="n">actual</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Raíz encontrada :"</span><span class="p">,</span> <span class="n">RAIZ</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Carpetas"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">descripcion</span><span class="p">,</span> <span class="n">ruta</span> <span class="ow">in</span> <span class="n">RUTAS_PROYECTO</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">estado</span> <span class="o">=</span> <span class="s2">"[OK]"</span> <span class="k">if</span> <span class="n">ruta</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="k">else</span> <span class="s2">"[FALTA]"</span>
+    <span class="n">ruta_visible</span> <span class="o">=</span> <span class="n">ruta</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">estado</span><span class="si">:</span><span class="s2">8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">descripcion</span><span class="si">:</span><span class="s2">28</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ruta_visible</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Archivos principales"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">descripcion</span><span class="p">,</span> <span class="n">ruta</span> <span class="ow">in</span> <span class="n">ARCHIVOS_PRINCIPALES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">estado</span> <span class="o">=</span> <span class="s2">"[OK]"</span> <span class="k">if</span> <span class="n">ruta</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="k">else</span> <span class="s2">"[FALTA]"</span>
+    <span class="n">ruta_visible</span> <span class="o">=</span> <span class="n">ruta</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">estado</span><span class="si">:</span><span class="s2">8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">descripcion</span><span class="si">:</span><span class="s2">28</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ruta_visible</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Carpeta inicial : C:\proyecto-grupo9-mcdi500\F1\notebooks
+Raíz encontrada : C:\proyecto-grupo9-mcdi500
+
+Carpetas
+  [OK]     datos originales             F1\data\raw
+  [OK]     datos procesados             F1\data\processed
+  [OK]     notebooks F1                 F1\notebooks
+  [OK]     documentación F1             F1\docs
+  [OK]     código reutilizable F1       F1\src
+  [OK]     fase 2                       F2
+  [OK]     fase 3                       F3
+  [OK]     fase 4                       F4
+
+Archivos principales
+  [OK]     README                       README.md
+  [OK]     dependencias                 requirements.txt
+  [OK]     reglas de Git                .gitignore
+  [OK]     dataset original             F1\data\raw\ai4i2020.csv
+  [OK]     notebook de definición       F1\notebooks\F1_Definicion.ipynb
+  [OK]     notebook validador           F1\notebooks\validador.ipynb
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3055cf69-3db0-4a1d-8d4c-c94e1b94bb2a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">carpetas_faltantes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">ruta</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">ruta</span> <span class="ow">in</span> <span class="n">RUTAS_PROYECTO</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ruta</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="n">archivos_faltantes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">ruta</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">ruta</span> <span class="ow">in</span> <span class="n">ARCHIVOS_PRINCIPALES</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ruta</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="ow">not</span> <span class="n">carpetas_faltantes</span><span class="p">,</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"Faltan carpetas del proyecto: </span><span class="si">{</span><span class="n">carpetas_faltantes</span><span class="si">}</span><span class="s2">"</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="ow">not</span> <span class="n">archivos_faltantes</span><span class="p">,</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"Faltan archivos principales: </span><span class="si">{</span><span class="n">archivos_faltantes</span><span class="si">}</span><span class="s2">"</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] La estructura principal del proyecto está completa."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] La estructura principal del proyecto está completa.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e97c2b5e-3e57-446b-a3fc-4269c9a3f07a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="3.1-Archivo-.gitignore"&gt;3.1 Archivo <code>.gitignore</code><a class="anchor-link" href="#3.1-Archivo-.gitignore">¶</a>&lt;/h3&gt;&lt;p&gt;El archivo <code>.gitignore</code> indica qué elementos locales o regenerables no deben
+incorporarse al historial de Git.&lt;/p&gt;
+&lt;p&gt;En este proyecto se excluyen el entorno virtual, las cachés de Python y Jupyter,
+los archivos temporales del sistema operativo y los archivos que podrían contener
+credenciales. El dataset AI4I 2020 se conserva porque su tamaño permite
+versionarlo y facilita la reproducción del análisis.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f70a04a0-745c-4428-9409-8842d8337a3b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ARCHIVO_GITIGNORE</span> <span class="o">=</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">".gitignore"</span>
+
+<span class="n">REGLAS_REQUERIDAS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">".venv/"</span><span class="p">,</span>
+    <span class="s2">"__pycache__/"</span><span class="p">,</span>
+    <span class="s2">"*.pyc"</span><span class="p">,</span>
+    <span class="s2">".ipynb_checkpoints/"</span><span class="p">,</span>
+    <span class="s2">"Thumbs.db"</span><span class="p">,</span>
+    <span class="s2">"desktop.ini"</span><span class="p">,</span>
+    <span class="s2">".env"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">ARCHIVO_GITIGNORE</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">"No se encontró .gitignore en la raíz."</span><span class="p">)</span>
+
+<span class="n">contenido_gitignore</span> <span class="o">=</span> <span class="n">ARCHIVO_GITIGNORE</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>
+<span class="p">)</span>
+
+<span class="n">reglas_activas</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">contenido_gitignore</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">reglas_faltantes</span> <span class="o">=</span> <span class="n">REGLAS_REQUERIDAS</span> <span class="o">-</span> <span class="n">reglas_activas</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Archivo:"</span><span class="p">,</span> <span class="n">ARCHIVO_GITIGNORE</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Reglas activas:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">reglas_activas</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">reglas_faltantes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Reglas pendientes:"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">regla</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">reglas_faltantes</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"  ·"</span><span class="p">,</span> <span class="n">regla</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] .gitignore contiene todas las reglas requeridas."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Archivo: .gitignore
+Reglas activas: 7
+[OK] .gitignore contiene todas las reglas requeridas.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=27a63d63-2cb1-4fc2-abe6-cec3fbb81418">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="3.2-Archivo-requirements.txt"&gt;3.2 Archivo <code>requirements.txt</code><a class="anchor-link" href="#3.2-Archivo-requirements.txt">¶</a>&lt;/h3&gt;&lt;p&gt;El archivo <code>requirements.txt</code> registra las dependencias necesarias para
+reproducir el entorno del proyecto.&lt;/p&gt;
+&lt;p&gt;En esta sección se comprueba que el archivo existe, que las dependencias
+principales tienen una versión declarada y que esas versiones corresponden
+con las instaladas en el entorno virtual.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=006bb582-af69-4a90-bed0-b6eac8d7e369">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">importlib.metadata</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">version</span> <span class="k">as</span> <span class="n">version_instalada</span><span class="p">,</span>
+    <span class="n">PackageNotFoundError</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ARCHIVO_REQUIREMENTS</span> <span class="o">=</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"requirements.txt"</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">ARCHIVO_REQUIREMENTS</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+        <span class="s2">"No se encontró requirements.txt en la raíz del proyecto."</span>
+    <span class="p">)</span>
+
+<span class="n">lineas_requirements</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">ARCHIVO_REQUIREMENTS</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span>
+        <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">dependencias_declaradas</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">lineas_requirements</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">"=="</span> <span class="ow">in</span> <span class="n">linea</span><span class="p">:</span>
+        <span class="n">nombre</span><span class="p">,</span> <span class="n">version</span> <span class="o">=</span> <span class="n">linea</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"=="</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">dependencias_declaradas</span><span class="p">[</span><span class="n">nombre</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="n">version</span>
+
+<span class="n">DEPENDENCIAS_PRINCIPALES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"numpy"</span><span class="p">,</span>
+    <span class="s2">"pandas"</span><span class="p">,</span>
+    <span class="s2">"matplotlib"</span><span class="p">,</span>
+    <span class="s2">"scikit-learn"</span><span class="p">,</span>
+    <span class="s2">"jupyterlab"</span><span class="p">,</span>
+    <span class="s2">"notebook"</span><span class="p">,</span>
+    <span class="s2">"ipykernel"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Archivo:"</span><span class="p">,</span> <span class="n">ARCHIVO_REQUIREMENTS</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dependencias declaradas:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lineas_requirements</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Verificación de dependencias principales"</span><span class="p">)</span>
+
+<span class="n">faltantes_requirements</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">paquete</span> <span class="ow">in</span> <span class="n">DEPENDENCIAS_PRINCIPALES</span><span class="p">:</span>
+    <span class="n">declarada</span> <span class="o">=</span> <span class="n">dependencias_declaradas</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">paquete</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">declarada</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">faltantes_requirements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">paquete</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  [FALTA] </span><span class="si">{</span><span class="n">paquete</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">instalada</span> <span class="o">=</span> <span class="n">version_instalada</span><span class="p">(</span><span class="n">paquete</span><span class="p">)</span>
+        <span class="n">coincide</span> <span class="o">=</span> <span class="n">instalada</span> <span class="o">==</span> <span class="n">declarada</span>
+        <span class="n">estado</span> <span class="o">=</span> <span class="s2">"[OK]"</span> <span class="k">if</span> <span class="n">coincide</span> <span class="k">else</span> <span class="s2">"[REVISAR]"</span>
+
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">estado</span><span class="si">:</span><span class="s2">9</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">paquete</span><span class="si">:</span><span class="s2">15</span><span class="si">}</span><span class="s2"> "</span>
+            <span class="sa">f</span><span class="s2">"declarada=</span><span class="si">{</span><span class="n">declarada</span><span class="si">}</span><span class="s2"> instalada=</span><span class="si">{</span><span class="n">instalada</span><span class="si">}</span><span class="s2">"</span>
+        <span class="p">)</span>
+
+    <span class="k">except</span> <span class="n">PackageNotFoundError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"  [FALTA] </span><span class="si">{</span><span class="n">paquete</span><span class="si">:</span><span class="s2">15</span><span class="si">}</span><span class="s2"> "</span>
+            <span class="sa">f</span><span class="s2">"declarada=</span><span class="si">{</span><span class="n">declarada</span><span class="si">}</span><span class="s2">, pero no está instalada"</span>
+        <span class="p">)</span>
+
+<span class="k">assert</span> <span class="ow">not</span> <span class="n">faltantes_requirements</span><span class="p">,</span> <span class="p">(</span>
+    <span class="s2">"Faltan dependencias principales en requirements.txt: "</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">faltantes_requirements</span><span class="si">}</span><span class="s2">"</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Archivo: requirements.txt
+Dependencias declaradas: 120
+
+Verificación de dependencias principales
+  [OK]      numpy           declarada=2.5.3 instalada=2.5.3
+  [OK]      pandas          declarada=3.0.5 instalada=3.0.5
+  [OK]      matplotlib      declarada=3.11.2 instalada=3.11.2
+  [OK]      scikit-learn    declarada=1.9.1 instalada=1.9.1
+  [OK]      jupyterlab      declarada=4.6.3 instalada=4.6.3
+  [OK]      notebook        declarada=7.6.2 instalada=7.6.2
+  [OK]      ipykernel       declarada=7.3.0 instalada=7.3.0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=be498fe3-a3df-4804-915d-8424880ad692">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="4.-M%C3%B3dulo-reutilizable"&gt;4. Módulo reutilizable<a class="anchor-link" href="#4.-M%C3%B3dulo-reutilizable">¶</a>&lt;/h2&gt;&lt;p&gt;Esta sección crea un módulo con funciones para localizar la raíz del proyecto y
+comprobar que un conjunto de columnas contiene las variables esperadas.&lt;/p&gt;
+&lt;p&gt;El módulo podrá reutilizarse en los notebooks de las fases posteriores.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=906c0c3e-741b-40fa-95d9-d83b396b1bfd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">DIR_SRC</span> <span class="o">=</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/src"</span>
+<span class="n">ARCHIVO_UTILIDADES</span> <span class="o">=</span> <span class="n">DIR_SRC</span> <span class="o">/</span> <span class="s2">"utilidades.py"</span>
+
+<span class="n">CODIGO_UTILIDADES</span> <span class="o">=</span> <span class="s1">'''</span><span class="se">\</span>
+<span class="s1">"""Funciones reutilizables del proyecto MCDI500 Grupo 9."""</span>
+
+<span class="s1">from pathlib import Path</span>
+
+
+<span class="s1">class ProyectoError(Exception):</span>
+<span class="s1">    """Error específico de validación del proyecto."""</span>
+
+
+<span class="s1">def buscar_raiz(inicio="."):</span>
+<span class="s1">    """Busca la raíz que contiene README.md y la carpeta F1."""</span>
+<span class="s1">    actual = Path(inicio).resolve()</span>
+
+<span class="s1">    for carpeta in [actual, *actual.parents]:</span>
+<span class="s1">        if (carpeta / "README.md").is_file() and (carpeta / "F1").is_dir():</span>
+<span class="s1">            return carpeta</span>
+
+<span class="s1">    raise ProyectoError("No se encontró la raíz del proyecto.")</span>
+
+
+<span class="s1">def validar_columnas(columnas, esperadas):</span>
+<span class="s1">    """Comprueba que estén presentes todas las columnas esperadas."""</span>
+<span class="s1">    faltantes = sorted(set(esperadas) - set(columnas))</span>
+
+<span class="s1">    if faltantes:</span>
+<span class="s1">        raise ProyectoError(f"Faltan columnas: </span><span class="si">{faltantes}</span><span class="s1">")</span>
+
+<span class="s1">    return True</span>
+<span class="s1">'''</span>
+
+<span class="k">if</span> <span class="n">ARCHIVO_UTILIDADES</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[AVISO] El archivo ya existe y no será sobrescrito."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ARCHIVO_UTILIDADES</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span>
+        <span class="n">CODIGO_UTILIDADES</span><span class="p">,</span>
+        <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">"[OK] Módulo creado:"</span><span class="p">,</span>
+        <span class="n">ARCHIVO_UTILIDADES</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">),</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[AVISO] El archivo ya existe y no será sobrescrito.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3b8807c1-c3a6-401b-9ce0-18dd5c91fb2e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">DIR_SRC</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">DIR_SRC</span><span class="p">))</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">utilidades</span>
+
+<span class="n">COLUMNAS_ESPERADAS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"UDI"</span><span class="p">,</span>
+    <span class="s2">"Product ID"</span><span class="p">,</span>
+    <span class="s2">"Type"</span><span class="p">,</span>
+    <span class="s2">"Air temperature [K]"</span><span class="p">,</span>
+    <span class="s2">"Process temperature [K]"</span><span class="p">,</span>
+    <span class="s2">"Rotational speed [rpm]"</span><span class="p">,</span>
+    <span class="s2">"Torque [Nm]"</span><span class="p">,</span>
+    <span class="s2">"Tool wear [min]"</span><span class="p">,</span>
+    <span class="s2">"Machine failure"</span><span class="p">,</span>
+    <span class="s2">"TWF"</span><span class="p">,</span>
+    <span class="s2">"HDF"</span><span class="p">,</span>
+    <span class="s2">"PWF"</span><span class="p">,</span>
+    <span class="s2">"OSF"</span><span class="p">,</span>
+    <span class="s2">"RNF"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">buscar_raiz</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span> <span class="o">==</span> <span class="n">RAIZ</span>
+<span class="k">assert</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">(</span>
+    <span class="n">COLUMNAS_ESPERADAS</span><span class="p">,</span>
+    <span class="n">COLUMNAS_ESPERADAS</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] F1/src/utilidades.py es importable."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Las pruebas normales del módulo fueron superadas."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] F1/src/utilidades.py es importable.
+[OK] Las pruebas normales del módulo fueron superadas.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a14d51a-ce4d-4bd4-a68a-ee09f54eb981">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="4.1-Pruebas-del-m%C3%B3dulo"&gt;4.1 Pruebas del módulo<a class="anchor-link" href="#4.1-Pruebas-del-m%C3%B3dulo">¶</a>&lt;/h3&gt;&lt;p&gt;El módulo se verifica mediante un caso normal, un caso límite y una excepción
+controlada.&lt;/p&gt;
+&lt;p&gt;Estas pruebas permiten comprobar que las funciones responden correctamente
+cuando reciben las columnas esperadas, cuando reciben una entrada vacía válida
+y cuando falta una variable obligatoria.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c4a04b02-cb0d-4ab0-bb90-3228797a0ddc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Caso normal: están presentes todas las columnas requeridas.</span>
+<span class="k">assert</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">(</span>
+    <span class="n">COLUMNAS_ESPERADAS</span><span class="p">,</span>
+    <span class="n">COLUMNAS_ESPERADAS</span><span class="p">,</span>
+<span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">buscar_raiz</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span> <span class="o">==</span> <span class="n">RAIZ</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Caso normal: raíz y columnas verificadas."</span><span class="p">)</span>
+
+
+<span class="c1"># Caso límite: no se exige ninguna columna y la entrada está vacía.</span>
+<span class="k">assert</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">([],</span> <span class="p">[])</span> <span class="ow">is</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Caso límite: listas vacías aceptadas."</span><span class="p">)</span>
+
+
+<span class="c1"># Excepción: falta una columna obligatoria.</span>
+<span class="n">columnas_incompletas</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">columna</span>
+    <span class="k">for</span> <span class="n">columna</span> <span class="ow">in</span> <span class="n">COLUMNAS_ESPERADAS</span>
+    <span class="k">if</span> <span class="n">columna</span> <span class="o">!=</span> <span class="s2">"Torque [Nm]"</span>
+<span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">(</span>
+        <span class="n">columnas_incompletas</span><span class="p">,</span>
+        <span class="n">COLUMNAS_ESPERADAS</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
+        <span class="s2">"La prueba debía detectar la ausencia de Torque [Nm]."</span>
+    <span class="p">)</span>
+
+<span class="k">except</span> <span class="n">utilidades</span><span class="o">.</span><span class="n">ProyectoError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Excepción controlada:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] Caso normal: raíz y columnas verificadas.
+[OK] Caso límite: listas vacías aceptadas.
+[OK] Excepción controlada: Faltan columnas: ['Torque [Nm]']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e450c63f-6a7f-4f38-8e36-84bd091642a1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="5.-Selecci%C3%B3n-y-ficha-del-conjunto-de-datos"&gt;5. Selección y ficha del conjunto de datos<a class="anchor-link" href="#5.-Selecci%C3%B3n-y-ficha-del-conjunto-de-datos">¶</a>&lt;/h2&gt;&lt;p&gt;Esta sección documenta la procedencia de AI4I 2020 y sus características
+principales. La ficha permite identificar la fuente, la licencia, el tamaño y
+las condiciones bajo las cuales puede utilizarse.&lt;/p&gt;
+&lt;h3 id="5.1-Procedencia"&gt;5.1 Procedencia<a class="anchor-link" href="#5.1-Procedencia">¶</a>&lt;/h3&gt;
+&lt;thead&gt;
+
+  &lt;th&gt;Campo&lt;/th&gt;
+  &lt;th&gt;Valor&lt;/th&gt;
+
+&lt;/thead&gt;
+&lt;tbody&gt;
+
+&lt;/tbody&gt;
+<table>&lt;tbody&gt;<tr></tr><tr>
+<td>Título</td>
+<td>AI4I 2020 Predictive Maintenance Dataset</td>
+</tr>
+<tr>
+<td>Repositorio</td>
+<td>UCI Machine Learning Repository</td>
+</tr>
+<tr>
+<td>Año</td>
+<td>2020</td>
+</tr>
+<tr>
+<td>Naturaleza</td>
+<td>Conjunto de datos sintético</td>
+</tr>
+<tr>
+<td>Registros</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td>Columnas del archivo</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Valores faltantes reportados</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Licencia</td>
+<td>Creative Commons Attribution 4.0 International</td>
+</tr>
+<tr>
+<td>DOI</td>
+<td><a href="https://doi.org/10.24432/C5HS5C">https://doi.org/10.24432/C5HS5C</a></td>
+</tr>
+<tr>
+<td>Archivo local</td>
+<td><code>F1/data/raw/ai4i2020.csv</code></td>
+</tr>&lt;/tbody&gt;</table>
+&lt;p&gt;El conjunto fue diseñado para representar condiciones de mantenimiento
+predictivo industrial. Incluye seis variables predictoras, identificadores,
+una variable de falla general y cinco indicadores de modos de falla.&lt;/p&gt;
+&lt;p&gt;<strong>Referencia APA 7</strong>&lt;/p&gt;
+&lt;p&gt;<em>AI4I 2020 Predictive Maintenance Dataset</em> [Conjunto de datos]. (2020).
+UCI Machine Learning Repository. <a href="https://doi.org/10.24432/C5HS5C">https://doi.org/10.24432/C5HS5C</a>&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3aaa0bbb-e314-4849-9fbf-5729bbd9cdc1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">FICHA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"titulo"</span><span class="p">:</span> <span class="s2">"AI4I 2020 Predictive Maintenance Dataset"</span><span class="p">,</span>
+    <span class="s2">"repositorio"</span><span class="p">:</span> <span class="s2">"UCI Machine Learning Repository"</span><span class="p">,</span>
+    <span class="s2">"anio"</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s2">"https://archive.ics.uci.edu/dataset/601/"</span>
+        <span class="s2">"ai4i+2020+predictive+maintenance+dataset"</span>
+    <span class="p">),</span>
+    <span class="s2">"doi"</span><span class="p">:</span> <span class="s2">"https://doi.org/10.24432/C5HS5C"</span><span class="p">,</span>
+    <span class="s2">"licencia"</span><span class="p">:</span> <span class="s2">"CC BY 4.0"</span><span class="p">,</span>
+    <span class="s2">"archivo"</span><span class="p">:</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/data/raw/ai4i2020.csv"</span><span class="p">,</span>
+    <span class="s2">"filas"</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="s2">"columnas"</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+    <span class="s2">"sintetico"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"faltantes_reportados"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Conjunto :"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"titulo"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Fuente   :"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"repositorio"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Archivo  :"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"archivo"</span><span class="p">]</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tamaño   :"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"filas"</span><span class="p">],</span> <span class="s2">"filas ×"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"columnas"</span><span class="p">],</span> <span class="s2">"columnas"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Licencia :"</span><span class="p">,</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"licencia"</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Conjunto : AI4I 2020 Predictive Maintenance Dataset
+Fuente   : UCI Machine Learning Repository
+Archivo  : F1\data\raw\ai4i2020.csv
+Tamaño   : 10000 filas × 14 columnas
+Licencia : CC BY 4.0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f40b1c5f-cfc2-4b05-a9f3-b67c85b8bc9c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="5.2-Evaluaci%C3%B3n-contra-los-criterios-del-curso"&gt;5.2 Evaluación contra los criterios del curso<a class="anchor-link" href="#5.2-Evaluaci%C3%B3n-contra-los-criterios-del-curso">¶</a>&lt;/h3&gt;&lt;p&gt;El conjunto se evalúa antes de utilizarlo para comprobar que posee suficientes
+registros, columnas y tipos de variables. También se revisan valores faltantes,
+duplicados y tamaño del archivo.&lt;/p&gt;
+&lt;p&gt;Esta comprobación complementa el trabajo realizado en <code>validador.ipynb</code>.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ebc2ddd9-edc4-405f-9b9b-face289a9529">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ROLES_VARIABLES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"UDI"</span><span class="p">:</span> <span class="s2">"identificador"</span><span class="p">,</span>
+    <span class="s2">"Product ID"</span><span class="p">:</span> <span class="s2">"identificador"</span><span class="p">,</span>
+    <span class="s2">"Type"</span><span class="p">:</span> <span class="s2">"nominal"</span><span class="p">,</span>
+    <span class="s2">"Air temperature [K]"</span><span class="p">:</span> <span class="s2">"continua"</span><span class="p">,</span>
+    <span class="s2">"Process temperature [K]"</span><span class="p">:</span> <span class="s2">"continua"</span><span class="p">,</span>
+    <span class="s2">"Rotational speed [rpm]"</span><span class="p">:</span> <span class="s2">"continua"</span><span class="p">,</span>
+    <span class="s2">"Torque [Nm]"</span><span class="p">:</span> <span class="s2">"continua"</span><span class="p">,</span>
+    <span class="s2">"Tool wear [min]"</span><span class="p">:</span> <span class="s2">"discreta"</span><span class="p">,</span>
+    <span class="s2">"Machine failure"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+    <span class="s2">"TWF"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+    <span class="s2">"HDF"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+    <span class="s2">"PWF"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+    <span class="s2">"OSF"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+    <span class="s2">"RNF"</span><span class="p">:</span> <span class="s2">"binaria"</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluar_criterios</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ruta</span><span class="p">,</span> <span class="n">roles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Evalúa el dataset contra los requisitos mínimos del curso."""</span>
+
+    <span class="n">filas</span><span class="p">,</span> <span class="n">columnas</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">max_nulos</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">duplicados</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">peso_mb</span> <span class="o">=</span> <span class="n">ruta</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">/</span> <span class="mi">1024</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="n">roles_utiles</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">rol</span>
+        <span class="k">for</span> <span class="n">rol</span> <span class="ow">in</span> <span class="n">roles</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">rol</span> <span class="o">!=</span> <span class="s2">"identificador"</span>
+    <span class="p">}</span>
+
+    <span class="n">numericas</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+        <span class="n">rol</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"continua"</span><span class="p">,</span> <span class="s2">"discreta"</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">rol</span> <span class="ow">in</span> <span class="n">roles</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">categoricas</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+        <span class="n">rol</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"nominal"</span><span class="p">,</span> <span class="s2">"binaria"</span><span class="p">,</span> <span class="s2">"ordinal"</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">rol</span> <span class="ow">in</span> <span class="n">roles</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">comprobaciones</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">"Al menos 2000 filas"</span><span class="p">,</span> <span class="n">filas</span> <span class="o">&gt;=</span> <span class="mi">2000</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">filas</span><span class="si">}</span><span class="s2"> filas"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"Al menos 12 columnas"</span><span class="p">,</span> <span class="n">columnas</span> <span class="o">&gt;=</span> <span class="mi">12</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">columnas</span><span class="si">}</span><span class="s2"> columnas"</span><span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Al menos 3 roles analíticos"</span><span class="p">,</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">roles_utiles</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">roles_utiles</span><span class="p">)),</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Al menos una variable numérica"</span><span class="p">,</span>
+            <span class="n">numericas</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">numericas</span><span class="si">}</span><span class="s2"> variables"</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Al menos una variable categórica"</span><span class="p">,</span>
+            <span class="n">categoricas</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">categoricas</span><span class="si">}</span><span class="s2"> variables"</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Ninguna variable supera 60</span><span class="si">% d</span><span class="s2">e nulos"</span><span class="p">,</span>
+            <span class="n">max_nulos</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">"máximo </span><span class="si">{</span><span class="n">max_nulos</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%"</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Archivo menor de 100 MB"</span><span class="p">,</span>
+            <span class="n">peso_mb</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">peso_mb</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> MB"</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="p">(</span>
+            <span class="s2">"Sin filas duplicadas exactas"</span><span class="p">,</span>
+            <span class="n">duplicados</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">duplicados</span><span class="si">}</span><span class="s2"> duplicadas"</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">"estado"</span><span class="p">:</span> <span class="s2">"OK"</span> <span class="k">if</span> <span class="n">cumple</span> <span class="k">else</span> <span class="s2">"FALTA"</span><span class="p">,</span>
+                <span class="s2">"requisito"</span><span class="p">:</span> <span class="n">requisito</span><span class="p">,</span>
+                <span class="s2">"detalle"</span><span class="p">:</span> <span class="n">detalle</span><span class="p">,</span>
+            <span class="p">}</span>
+            <span class="k">for</span> <span class="n">requisito</span><span class="p">,</span> <span class="n">cumple</span><span class="p">,</span> <span class="n">detalle</span> <span class="ow">in</span> <span class="n">comprobaciones</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5caecfb5-2064-42a5-9301-47f85b3f2f96">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df_candidato</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">FICHA</span><span class="p">[</span><span class="s2">"archivo"</span><span class="p">],</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">evaluacion</span> <span class="o">=</span> <span class="n">evaluar_criterios</span><span class="p">(</span>
+    <span class="n">df_candidato</span><span class="p">,</span>
+    <span class="n">FICHA</span><span class="p">[</span><span class="s2">"archivo"</span><span class="p">],</span>
+    <span class="n">ROLES_VARIABLES</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">evaluacion</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="s2">"FALTA"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">evaluacion</span><span class="p">[</span><span class="s2">"estado"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">(</span>
+    <span class="s2">"El dataset no cumple todos los requisitos mínimos."</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] AI4I 2020 cumple los requisitos mínimos del curso."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+
+  &lt;thead&gt;
+    
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;estado&lt;/th&gt;
+      &lt;th&gt;requisito&lt;/th&gt;
+      &lt;th&gt;detalle&lt;/th&gt;
+    
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    
+      &lt;th&gt;0&lt;/th&gt;
+      
+      &lt;th&gt;1&lt;/th&gt;
+      
+      &lt;th&gt;2&lt;/th&gt;
+      
+      &lt;th&gt;3&lt;/th&gt;
+      
+      &lt;th&gt;4&lt;/th&gt;
+      
+      &lt;th&gt;5&lt;/th&gt;
+      
+      &lt;th&gt;6&lt;/th&gt;
+      
+      &lt;th&gt;7&lt;/th&gt;
+      
+  &lt;/tbody&gt;
+<table class="dataframe">&lt;tbody&gt;<tr></tr><tr><td>OK</td>
+<td>Al menos 2000 filas</td>
+<td>10000 filas</td>
+</tr>
+<tr><td>OK</td>
+<td>Al menos 12 columnas</td>
+<td>14 columnas</td>
+</tr>
+<tr><td>OK</td>
+<td>Al menos 3 roles analíticos</td>
+<td>binaria, continua, discreta, nominal</td>
+</tr>
+<tr><td>OK</td>
+<td>Al menos una variable numérica</td>
+<td>5 variables</td>
+</tr>
+<tr><td>OK</td>
+<td>Al menos una variable categórica</td>
+<td>7 variables</td>
+</tr>
+<tr><td>OK</td>
+<td>Ninguna variable supera 60% de nulos</td>
+<td>máximo 0.0%</td>
+</tr>
+<tr><td>OK</td>
+<td>Archivo menor de 100 MB</td>
+<td>0.5 MB</td>
+</tr>
+<tr><td>OK</td>
+<td>Sin filas duplicadas exactas</td>
+<td>0 duplicadas</td>
+</tr>&lt;/tbody&gt;</table>
+</div>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] AI4I 2020 cumple los requisitos mínimos del curso.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e053e0b-d5a6-48a7-8b0b-c3cab2d3ae66">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="5.3-Diccionario-de-variables"&gt;5.3 Diccionario de variables<a class="anchor-link" href="#5.3-Diccionario-de-variables">¶</a>&lt;/h3&gt;&lt;p&gt;El diccionario identifica el significado, el rol analítico, la unidad y el uso
+previsto de cada variable.&lt;/p&gt;
+&lt;p&gt;Esta clasificación evita tratar los identificadores como mediciones y permite
+excluir los modos de falla como predictores de <code>Machine failure</code>, evitando fuga
+de información.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6a1bbf29-6115-4669-9af0-d6f7ebfa86a9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">DICCIONARIO</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"UDI"</span><span class="p">,</span> <span class="s2">"identificador"</span><span class="p">,</span> <span class="s2">"Identificador único del registro"</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Product ID"</span><span class="p">,</span> <span class="s2">"identificador"</span><span class="p">,</span> <span class="s2">"Identificador del producto"</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"No"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Type"</span><span class="p">,</span> <span class="s2">"nominal"</span><span class="p">,</span> <span class="s2">"Tipo de producto: L, M o H"</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">"Sí"</span><span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Air temperature [K]"</span><span class="p">,</span>
+        <span class="s2">"continua"</span><span class="p">,</span>
+        <span class="s2">"Temperatura del aire"</span><span class="p">,</span>
+        <span class="s2">"K"</span><span class="p">,</span>
+        <span class="s2">"Sí"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Process temperature [K]"</span><span class="p">,</span>
+        <span class="s2">"continua"</span><span class="p">,</span>
+        <span class="s2">"Temperatura del proceso"</span><span class="p">,</span>
+        <span class="s2">"K"</span><span class="p">,</span>
+        <span class="s2">"Sí"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Rotational speed [rpm]"</span><span class="p">,</span>
+        <span class="s2">"continua"</span><span class="p">,</span>
+        <span class="s2">"Velocidad de rotación"</span><span class="p">,</span>
+        <span class="s2">"rpm"</span><span class="p">,</span>
+        <span class="s2">"Sí"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Torque [Nm]"</span><span class="p">,</span>
+        <span class="s2">"continua"</span><span class="p">,</span>
+        <span class="s2">"Torque aplicado"</span><span class="p">,</span>
+        <span class="s2">"Nm"</span><span class="p">,</span>
+        <span class="s2">"Sí"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Tool wear [min]"</span><span class="p">,</span>
+        <span class="s2">"discreta"</span><span class="p">,</span>
+        <span class="s2">"Desgaste acumulado de la herramienta"</span><span class="p">,</span>
+        <span class="s2">"min"</span><span class="p">,</span>
+        <span class="s2">"Sí"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Machine failure"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Variable objetivo: 1 indica falla"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"Objetivo"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"TWF"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Falla por desgaste de herramienta"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"No"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"HDF"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Falla por disipación de calor"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"No"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"PWF"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Falla de potencia"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"No"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"OSF"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Falla por sobreesfuerzo"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"No"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"RNF"</span><span class="p">,</span>
+        <span class="s2">"binaria"</span><span class="p">,</span>
+        <span class="s2">"Falla aleatoria"</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">"No"</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">diccionario</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">DICCIONARIO</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"variable"</span><span class="p">,</span>
+        <span class="s2">"rol_analitico"</span><span class="p">,</span>
+        <span class="s2">"descripcion"</span><span class="p">,</span>
+        <span class="s2">"unidad"</span><span class="p">,</span>
+        <span class="s2">"uso_como_predictor"</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">])</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">df_candidato</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="p">(</span>
+    <span class="s2">"El diccionario no coincide con las columnas del dataset."</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span> <span class="o">==</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"columnas"</span><span class="p">],</span> <span class="p">(</span>
+    <span class="s2">"El diccionario no contiene las 14 variables esperadas."</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">"[OK] Diccionario completo:"</span><span class="p">,</span>
+    <span class="nb">len</span><span class="p">(</span><span class="n">diccionario</span><span class="p">),</span>
+    <span class="s2">"variables."</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] Diccionario completo: 14 variables.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+
+  &lt;thead&gt;
+    
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;variable&lt;/th&gt;
+      &lt;th&gt;rol_analitico&lt;/th&gt;
+      &lt;th&gt;descripcion&lt;/th&gt;
+      &lt;th&gt;unidad&lt;/th&gt;
+      &lt;th&gt;uso_como_predictor&lt;/th&gt;
+    
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    
+      &lt;th&gt;0&lt;/th&gt;
+      
+      &lt;th&gt;1&lt;/th&gt;
+      
+      &lt;th&gt;2&lt;/th&gt;
+      
+      &lt;th&gt;3&lt;/th&gt;
+      
+      &lt;th&gt;4&lt;/th&gt;
+      
+      &lt;th&gt;5&lt;/th&gt;
+      
+      &lt;th&gt;6&lt;/th&gt;
+      
+      &lt;th&gt;7&lt;/th&gt;
+      
+      &lt;th&gt;8&lt;/th&gt;
+      
+      &lt;th&gt;9&lt;/th&gt;
+      
+      &lt;th&gt;10&lt;/th&gt;
+      
+      &lt;th&gt;11&lt;/th&gt;
+      
+      &lt;th&gt;12&lt;/th&gt;
+      
+      &lt;th&gt;13&lt;/th&gt;
+      
+  &lt;/tbody&gt;
+<table class="dataframe">&lt;tbody&gt;<tr></tr><tr><td>UDI</td>
+<td>identificador</td>
+<td>Identificador único del registro</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>Product ID</td>
+<td>identificador</td>
+<td>Identificador del producto</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>Type</td>
+<td>nominal</td>
+<td>Tipo de producto: L, M o H</td>
+<td>NaN</td>
+<td>Sí</td>
+</tr>
+<tr><td>Air temperature [K]</td>
+<td>continua</td>
+<td>Temperatura del aire</td>
+<td>K</td>
+<td>Sí</td>
+</tr>
+<tr><td>Process temperature [K]</td>
+<td>continua</td>
+<td>Temperatura del proceso</td>
+<td>K</td>
+<td>Sí</td>
+</tr>
+<tr><td>Rotational speed [rpm]</td>
+<td>continua</td>
+<td>Velocidad de rotación</td>
+<td>rpm</td>
+<td>Sí</td>
+</tr>
+<tr><td>Torque [Nm]</td>
+<td>continua</td>
+<td>Torque aplicado</td>
+<td>Nm</td>
+<td>Sí</td>
+</tr>
+<tr><td>Tool wear [min]</td>
+<td>discreta</td>
+<td>Desgaste acumulado de la herramienta</td>
+<td>min</td>
+<td>Sí</td>
+</tr>
+<tr><td>Machine failure</td>
+<td>binaria</td>
+<td>Variable objetivo: 1 indica falla</td>
+<td>NaN</td>
+<td>Objetivo</td>
+</tr>
+<tr><td>TWF</td>
+<td>binaria</td>
+<td>Falla por desgaste de herramienta</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>HDF</td>
+<td>binaria</td>
+<td>Falla por disipación de calor</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>PWF</td>
+<td>binaria</td>
+<td>Falla de potencia</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>OSF</td>
+<td>binaria</td>
+<td>Falla por sobreesfuerzo</td>
+<td>NaN</td>
+<td>No</td>
+</tr>
+<tr><td>RNF</td>
+<td>binaria</td>
+<td>Falla aleatoria</td>
+<td>NaN</td>
+<td>No</td>
+</tr>&lt;/tbody&gt;</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d949dc36-bbad-4756-934b-bc83018f3140">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h3 id="5.4-Comprobaci%C3%B3n-del-archivo-original"&gt;5.4 Comprobación del archivo original<a class="anchor-link" href="#5.4-Comprobaci%C3%B3n-del-archivo-original">¶</a>&lt;/h3&gt;&lt;p&gt;Esta sección comprueba que el archivo original está disponible y que sus
+dimensiones y columnas coinciden con la ficha y el diccionario.&lt;/p&gt;
+&lt;p&gt;La revisión no modifica, limpia ni transforma los datos. Solo verifica la
+entrada que utilizará la Fase 2.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b0fa1cf5-b82c-4107-a891-eca1766f0824">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ARCHIVO</span> <span class="o">=</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"archivo"</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">ARCHIVO</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"No se encontró el dataset en: </span><span class="si">{</span><span class="n">ARCHIVO</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+
+<span class="n">df_crudo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">ARCHIVO</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Archivo encontrado :"</span><span class="p">,</span> <span class="n">ARCHIVO</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensiones reales :"</span><span class="p">,</span> <span class="n">df_crudo</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">"Dimensiones esperadas:"</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">FICHA</span><span class="p">[</span><span class="s2">"filas"</span><span class="p">],</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"columnas"</span><span class="p">]),</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df_crudo</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span>
+    <span class="n">FICHA</span><span class="p">[</span><span class="s2">"filas"</span><span class="p">],</span>
+    <span class="n">FICHA</span><span class="p">[</span><span class="s2">"columnas"</span><span class="p">],</span>
+<span class="p">),</span> <span class="s2">"Las dimensiones no coinciden con la ficha."</span>
+
+<span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">(</span>
+    <span class="n">df_crudo</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">diccionario</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Dimensiones y columnas verificadas."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Valores faltantes :"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">df_crudo</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Filas duplicadas  :"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">df_crudo</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Distribución de Machine failure"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span>
+    <span class="n">df_crudo</span><span class="p">[</span><span class="s2">"Machine failure"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s2">"clase"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">"registros"</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Archivo encontrado : F1\data\raw\ai4i2020.csv
+Dimensiones reales : (10000, 14)
+Dimensiones esperadas: (10000, 14)
+[OK] Dimensiones y columnas verificadas.
+Valores faltantes : 0
+Filas duplicadas  : 0
+
+Distribución de Machine failure
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+
+  &lt;thead&gt;
+    
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;registros&lt;/th&gt;
+    
+      &lt;th&gt;clase&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    
+      &lt;th&gt;0&lt;/th&gt;
+      
+      &lt;th&gt;1&lt;/th&gt;
+      
+  &lt;/tbody&gt;
+<table class="dataframe">&lt;tbody&gt;<tr></tr>
+<tr></tr><tr><td>9661</td>
+</tr>
+<tr><td>339</td>
+</tr>&lt;/tbody&gt;</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5053b8fe-bf2a-492e-9b9c-a0e636ea86f5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="6.-Control-de-versiones"&gt;6. Control de versiones<a class="anchor-link" href="#6.-Control-de-versiones">¶</a>&lt;/h2&gt;&lt;p&gt;Esta sección consulta el estado del repositorio Git para dejar evidencia de la
+rama activa, la identidad configurada, los últimos commits y los cambios locales.&lt;/p&gt;
+&lt;p&gt;El notebook solo consulta información. No ejecuta <code>git add</code>, <code>git commit</code>,
+<code>git push</code> ni modifica el historial.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b30776aa-e256-4719-8f36-08289e120e94">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">consultar_git</span><span class="p">(</span><span class="o">*</span><span class="n">argumentos</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Ejecuta una consulta de Git dentro del repositorio."""</span>
+
+    <span class="k">if</span> <span class="n">shutil</span><span class="o">.</span><span class="n">which</span><span class="p">(</span><span class="s2">"git"</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"Git no está disponible en el sistema."</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">proceso</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"-C"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">),</span> <span class="o">*</span><span class="n">argumentos</span><span class="p">],</span>
+            <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span>
+            <span class="n">errors</span><span class="o">=</span><span class="s2">"replace"</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">SubprocessError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"No se pudo consultar Git: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">"</span>
+
+    <span class="k">if</span> <span class="n">proceso</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">mensaje</span> <span class="o">=</span> <span class="n">proceso</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">"Git terminó con error."</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">mensaje</span>
+
+    <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">proceso</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=42f374f0-76e1-47f8-acbb-1e5502660ace">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ok</span><span class="p">,</span> <span class="n">version_git</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"--version"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Git:"</span><span class="p">,</span> <span class="n">version_git</span> <span class="k">if</span> <span class="n">ok</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">"[AVISO] </span><span class="si">{</span><span class="n">version_git</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">usuario</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"config"</span><span class="p">,</span> <span class="s2">"user.name"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Usuario:"</span><span class="p">,</span> <span class="n">usuario</span> <span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">usuario</span> <span class="k">else</span> <span class="s2">"[FALTA]"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">correo</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"config"</span><span class="p">,</span> <span class="s2">"user.email"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Correo:"</span><span class="p">,</span> <span class="n">correo</span> <span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">correo</span> <span class="k">else</span> <span class="s2">"[FALTA]"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">rama</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"branch"</span><span class="p">,</span> <span class="s2">"--show-current"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Rama activa:"</span><span class="p">,</span> <span class="n">rama</span> <span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">rama</span> <span class="k">else</span> <span class="s2">"[FALTA]"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">remoto</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"remote"</span><span class="p">,</span> <span class="s2">"get-url"</span><span class="p">,</span> <span class="s2">"origin"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Repositorio remoto:"</span><span class="p">,</span> <span class="n">remoto</span> <span class="k">if</span> <span class="n">ok</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">"[AVISO] </span><span class="si">{</span><span class="n">remoto</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">historial</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"log"</span><span class="p">,</span> <span class="s2">"--oneline"</span><span class="p">,</span> <span class="s2">"-5"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Últimos commits"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">historial</span> <span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">historial</span> <span class="k">else</span> <span class="s2">"[AVISO] Sin commits disponibles"</span><span class="p">)</span>
+
+<span class="n">ok</span><span class="p">,</span> <span class="n">estado</span> <span class="o">=</span> <span class="n">consultar_git</span><span class="p">(</span><span class="s2">"status"</span><span class="p">,</span> <span class="s2">"--short"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Cambios locales"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">estado</span> <span class="k">if</span> <span class="n">ok</span> <span class="ow">and</span> <span class="n">estado</span> <span class="k">else</span> <span class="s2">"Ningún cambio pendiente"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Git: git version 2.46.0.windows.1
+Usuario: Alexander Sepulveda
+Correo: a.sepulvedaormazabal@gmail.com
+Rama activa: main
+Repositorio remoto: https://github.com/alexander-seor/proyecto-grupo9-mcdi500.git
+
+Últimos commits
+093e41b docs: actualiza README y entregables de Formativa 1
+f75a1eb Documenta dataset y validacion inicial de variables
+64ff7b8 Agrega dataset AI4I 2020 para mantenimiento predictivo
+d5d135e Avances Fase 1 y actualización de dependencias
+8e9c38e Initial commit
+
+Cambios locales
+M .gitignore
+ M F1/notebooks/F1_Definicion.ipynb
+?? F1/docs/diccionario_variables.csv
+?? F1/docs/evaluacion_criterios_dataset.csv
+?? F1/docs/metadatos_fase1.json
+?? F1/docs/vinculacion_mapa_conceptual.csv
+?? F1/src/utilidades.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c627e724-0e11-4695-97ab-1e53aad3e32c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="7.-Validaci%C3%B3n-t%C3%A9cnica-de-la-Fase-1"&gt;7. Validación técnica de la Fase 1<a class="anchor-link" href="#7.-Validaci%C3%B3n-t%C3%A9cnica-de-la-Fase-1">¶</a>&lt;/h2&gt;&lt;p&gt;Esta sección reúne las comprobaciones principales de la fase. Si alguna
+condición no se cumple, <code>assert</code> detiene la ejecución e indica qué elemento
+debe corregirse.&lt;/p&gt;
+&lt;p&gt;Se verifica la estructura del repositorio, los archivos reproducibles, la
+definición del proyecto, el dataset, el diccionario y el módulo reutilizable.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=11f437d4-bd4a-4d29-8092-95f49f6aecdf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">validar_fase1</span><span class="p">(</span>
+    <span class="n">raiz</span><span class="p">,</span>
+    <span class="n">proyecto</span><span class="p">,</span>
+    <span class="n">ficha</span><span class="p">,</span>
+    <span class="n">dataframe</span><span class="p">,</span>
+    <span class="n">diccionario_variables</span><span class="p">,</span>
+    <span class="n">evaluacion_dataset</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Comprueba los entregables técnicos principales de la Fase 1."""</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"VALIDACIÓN DE LA FASE 1"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="c1"># 1. Estructura</span>
+    <span class="n">carpetas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"F1/data/raw"</span><span class="p">,</span>
+        <span class="s2">"F1/data/processed"</span><span class="p">,</span>
+        <span class="s2">"F1/notebooks"</span><span class="p">,</span>
+        <span class="s2">"F1/docs"</span><span class="p">,</span>
+        <span class="s2">"F1/src"</span><span class="p">,</span>
+        <span class="s2">"F2"</span><span class="p">,</span>
+        <span class="s2">"F3"</span><span class="p">,</span>
+        <span class="s2">"F4"</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">faltan_carpetas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">carpeta</span>
+        <span class="k">for</span> <span class="n">carpeta</span> <span class="ow">in</span> <span class="n">carpetas</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">raiz</span> <span class="o">/</span> <span class="n">carpeta</span><span class="p">)</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>
+    <span class="p">]</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">faltan_carpetas</span><span class="p">,</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"Faltan carpetas: </span><span class="si">{</span><span class="n">faltan_carpetas</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[OK] Estructura: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">carpetas</span><span class="p">)</span><span class="si">}</span><span class="s2"> carpetas verificadas."</span><span class="p">)</span>
+
+    <span class="c1"># 2. Archivos reproducibles</span>
+    <span class="n">archivos</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"README.md"</span><span class="p">,</span>
+        <span class="s2">"requirements.txt"</span><span class="p">,</span>
+        <span class="s2">".gitignore"</span><span class="p">,</span>
+        <span class="s2">"F1/data/raw/ai4i2020.csv"</span><span class="p">,</span>
+        <span class="s2">"F1/notebooks/F1_Definicion.ipynb"</span><span class="p">,</span>
+        <span class="s2">"F1/src/utilidades.py"</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">faltan_archivos</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">archivo</span>
+        <span class="k">for</span> <span class="n">archivo</span> <span class="ow">in</span> <span class="n">archivos</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">raiz</span> <span class="o">/</span> <span class="n">archivo</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+    <span class="p">]</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">faltan_archivos</span><span class="p">,</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"Faltan archivos: </span><span class="si">{</span><span class="n">faltan_archivos</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[OK] Archivos: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">archivos</span><span class="p">)</span><span class="si">}</span><span class="s2"> elementos verificados."</span><span class="p">)</span>
+
+    <span class="c1"># 3. Definición del proyecto</span>
+    <span class="n">claves</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"titulo"</span><span class="p">,</span>
+        <span class="s2">"problematica"</span><span class="p">,</span>
+        <span class="s2">"objetivo_general"</span><span class="p">,</span>
+        <span class="s2">"objetivos_especificos"</span><span class="p">,</span>
+        <span class="s2">"preguntas"</span><span class="p">,</span>
+        <span class="s2">"alcance"</span><span class="p">,</span>
+        <span class="s2">"limitaciones"</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">faltan_claves</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">clave</span>
+        <span class="k">for</span> <span class="n">clave</span> <span class="ow">in</span> <span class="n">claves</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">clave</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">faltan_claves</span><span class="p">,</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"Faltan elementos en PROYECTO: </span><span class="si">{</span><span class="n">faltan_claves</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Definición del proyecto completa."</span><span class="p">)</span>
+
+    <span class="c1"># 4. Dataset</span>
+    <span class="k">assert</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span>
+        <span class="n">ficha</span><span class="p">[</span><span class="s2">"filas"</span><span class="p">],</span>
+        <span class="n">ficha</span><span class="p">[</span><span class="s2">"columnas"</span><span class="p">],</span>
+    <span class="p">),</span> <span class="s2">"Las dimensiones del dataset no coinciden con la ficha."</span>
+
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">"[OK] Dataset:"</span><span class="p">,</span>
+        <span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s2">"filas ×"</span><span class="p">,</span>
+        <span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">"columnas."</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># 5. Diccionario</span>
+    <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">diccionario_variables</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">])</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span>
+        <span class="n">dataframe</span><span class="o">.</span><span class="n">columns</span>
+    <span class="p">),</span> <span class="s2">"El diccionario no coincide con el dataset."</span>
+
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">"[OK] Diccionario:"</span><span class="p">,</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">diccionario_variables</span><span class="p">),</span>
+        <span class="s2">"variables documentadas."</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># 6. Evaluación</span>
+    <span class="k">assert</span> <span class="s2">"FALTA"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">evaluacion_dataset</span><span class="p">[</span><span class="s2">"estado"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">(</span>
+        <span class="s2">"El dataset no cumple todos los criterios mínimos."</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Evaluación del dataset aprobada."</span><span class="p">)</span>
+
+    <span class="c1"># 7. Módulo</span>
+    <span class="k">assert</span> <span class="nb">callable</span><span class="p">(</span><span class="n">utilidades</span><span class="o">.</span><span class="n">buscar_raiz</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">callable</span><span class="p">(</span><span class="n">utilidades</span><span class="o">.</span><span class="n">validar_columnas</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"[OK] Módulo utilidades importable."</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">[OK] Validación principal de la Fase 1 completada."</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=33435e7f-1f40-48fe-aa09-9a7d9c6f82c4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">FASE1_VALIDA</span> <span class="o">=</span> <span class="n">validar_fase1</span><span class="p">(</span>
+    <span class="n">RAIZ</span><span class="p">,</span>
+    <span class="n">PROYECTO</span><span class="p">,</span>
+    <span class="n">FICHA</span><span class="p">,</span>
+    <span class="n">df_crudo</span><span class="p">,</span>
+    <span class="n">diccionario</span><span class="p">,</span>
+    <span class="n">evaluacion</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>VALIDACIÓN DE LA FASE 1
+--------------------------------------------------
+[OK] Estructura: 8 carpetas verificadas.
+[OK] Archivos: 6 elementos verificados.
+[OK] Definición del proyecto completa.
+[OK] Dataset: 10000 filas × 14 columnas.
+[OK] Diccionario: 14 variables documentadas.
+[OK] Evaluación del dataset aprobada.
+[OK] Módulo utilidades importable.
+
+[OK] Validación principal de la Fase 1 completada.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c23908d6-f758-422c-bc67-b8099ed45e30">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="8.-Vinculaci%C3%B3n-con-el-mapa-conceptual"&gt;8. Vinculación con el mapa conceptual<a class="anchor-link" href="#8.-Vinculaci%C3%B3n-con-el-mapa-conceptual">¶</a>&lt;/h2&gt;&lt;p&gt;El mapa conceptual de la Formativa 1 representa el flujo desde la definición
+del problema hasta la obtención de resultados reproducibles.&lt;/p&gt;
+&lt;p&gt;La tabla siguiente relaciona sus elementos con la implementación real del
+proyecto y distingue lo que ya fue desarrollado de lo que queda proyectado
+para fases posteriores.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4ebf05a7-80d4-42de-b7d8-902002000da9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">VINCULACION</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span>
+        <span class="s2">"Delimitar el problema"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">"F1_Definicion.ipynb y README.md"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Validar y describir los datos"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">"validador.ipynb e informe_dataset.md"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Preservar los datos originales"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">"F1/data/raw/ai4i2020.csv"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Guardar datos procesados"</span><span class="p">,</span>
+        <span class="s2">"Proyectado para F2"</span><span class="p">,</span>
+        <span class="s2">"F1/data/processed/"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Preparar el entorno reproducible"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">".venv, requirements.txt y kernel del proyecto"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Analizar en Jupyter"</span><span class="p">,</span>
+        <span class="s2">"Parcial"</span><span class="p">,</span>
+        <span class="s2">"Reconocimiento inicial en F1; preparación y exploración en F2"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Documentar la evidencia"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">"README.md, notebooks y F1/docs/"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Registrar cambios con Git"</span><span class="p">,</span>
+        <span class="s2">"Implementado"</span><span class="p">,</span>
+        <span class="s2">"Historial de commits del repositorio"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Colaborar mediante GitHub"</span><span class="p">,</span>
+        <span class="s2">"Adaptado a trabajo individual"</span><span class="p">,</span>
+        <span class="s2">"Repositorio remoto personal"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="s2">"Modelar y evaluar"</span><span class="p">,</span>
+        <span class="s2">"Proyectado"</span><span class="p">,</span>
+        <span class="s2">"Fases 3 y 4"</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">vinculacion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">VINCULACION</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"elemento_del_mapa"</span><span class="p">,</span>
+        <span class="s2">"estado"</span><span class="p">,</span>
+        <span class="s2">"evidencia"</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">vinculacion</span><span class="p">[</span><span class="s2">"evidencia"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">ne</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="p">(</span>
+    <span class="s2">"Existen elementos del mapa sin evidencia."</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">"[OK]"</span><span class="p">,</span>
+    <span class="nb">len</span><span class="p">(</span><span class="n">vinculacion</span><span class="p">),</span>
+    <span class="s2">"elementos del mapa vinculados."</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">vinculacion</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[OK] 10 elementos del mapa vinculados.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+
+  &lt;thead&gt;
+    
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;elemento_del_mapa&lt;/th&gt;
+      &lt;th&gt;estado&lt;/th&gt;
+      &lt;th&gt;evidencia&lt;/th&gt;
+    
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    
+      &lt;th&gt;0&lt;/th&gt;
+      
+      &lt;th&gt;1&lt;/th&gt;
+      
+      &lt;th&gt;2&lt;/th&gt;
+      
+      &lt;th&gt;3&lt;/th&gt;
+      
+      &lt;th&gt;4&lt;/th&gt;
+      
+      &lt;th&gt;5&lt;/th&gt;
+      
+      &lt;th&gt;6&lt;/th&gt;
+      
+      &lt;th&gt;7&lt;/th&gt;
+      
+      &lt;th&gt;8&lt;/th&gt;
+      
+      &lt;th&gt;9&lt;/th&gt;
+      
+  &lt;/tbody&gt;
+<table class="dataframe">&lt;tbody&gt;<tr></tr><tr><td>Delimitar el problema</td>
+<td>Implementado</td>
+<td>F1_Definicion.ipynb y README.md</td>
+</tr>
+<tr><td>Validar y describir los datos</td>
+<td>Implementado</td>
+<td>validador.ipynb e informe_dataset.md</td>
+</tr>
+<tr><td>Preservar los datos originales</td>
+<td>Implementado</td>
+<td>F1/data/raw/ai4i2020.csv</td>
+</tr>
+<tr><td>Guardar datos procesados</td>
+<td>Proyectado para F2</td>
+<td>F1/data/processed/</td>
+</tr>
+<tr><td>Preparar el entorno reproducible</td>
+<td>Implementado</td>
+<td>.venv, requirements.txt y kernel del proyecto</td>
+</tr>
+<tr><td>Analizar en Jupyter</td>
+<td>Parcial</td>
+<td>Reconocimiento inicial en F1; preparación y ex...</td>
+</tr>
+<tr><td>Documentar la evidencia</td>
+<td>Implementado</td>
+<td>README.md, notebooks y F1/docs/</td>
+</tr>
+<tr><td>Registrar cambios con Git</td>
+<td>Implementado</td>
+<td>Historial de commits del repositorio</td>
+</tr>
+<tr><td>Colaborar mediante GitHub</td>
+<td>Adaptado a trabajo individual</td>
+<td>Repositorio remoto personal</td>
+</tr>
+<tr><td>Modelar y evaluar</td>
+<td>Proyectado</td>
+<td>Fases 3 y 4</td>
+</tr>&lt;/tbody&gt;</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3738d9c5-327c-4fa9-b738-c0fd88ca9a00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="9.-Persistencia-y-trazabilidad"&gt;9. Persistencia y trazabilidad<a class="anchor-link" href="#9.-Persistencia-y-trazabilidad">¶</a>&lt;/h2&gt;&lt;p&gt;Los resultados de las comprobaciones deben quedar disponibles fuera del
+notebook. Por esta razón, el diccionario de variables, la evaluación del
+dataset, la vinculación con el mapa y los metadatos de ejecución se guardan
+en <code>F1/docs/</code>.&lt;/p&gt;
+&lt;p&gt;Estos archivos permiten revisar las decisiones y las condiciones de ejecución
+sin tener que localizar cada resultado dentro del notebook.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a0afd732-10e4-46a5-922d-562ecea6fd1f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">DIR_DOCS</span> <span class="o">=</span> <span class="n">RAIZ</span> <span class="o">/</span> <span class="s2">"F1/docs"</span>
+
+<span class="k">assert</span> <span class="n">DIR_DOCS</span><span class="o">.</span><span class="n">is_dir</span><span class="p">(),</span> <span class="p">(</span>
+    <span class="s2">"No se encontró la carpeta F1/docs."</span>
+<span class="p">)</span>
+
+<span class="n">ARCHIVO_DICCIONARIO</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">DIR_DOCS</span> <span class="o">/</span> <span class="s2">"diccionario_variables.csv"</span>
+<span class="p">)</span>
+
+<span class="n">ARCHIVO_EVALUACION</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">DIR_DOCS</span> <span class="o">/</span> <span class="s2">"evaluacion_criterios_dataset.csv"</span>
+<span class="p">)</span>
+
+<span class="n">ARCHIVO_VINCULACION</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">DIR_DOCS</span> <span class="o">/</span> <span class="s2">"vinculacion_mapa_conceptual.csv"</span>
+<span class="p">)</span>
+
+<span class="n">ARCHIVO_METADATOS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">DIR_DOCS</span> <span class="o">/</span> <span class="s2">"metadatos_fase1.json"</span>
+<span class="p">)</span>
+
+<span class="n">diccionario</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+    <span class="n">ARCHIVO_DICCIONARIO</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">evaluacion</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+    <span class="n">ARCHIVO_EVALUACION</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">vinculacion</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+    <span class="n">ARCHIVO_VINCULACION</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8-sig"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">METADATOS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"proyecto"</span><span class="p">:</span> <span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"titulo"</span><span class="p">],</span>
+    <span class="s2">"grupo"</span><span class="p">:</span> <span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"grupo"</span><span class="p">],</span>
+    <span class="s2">"integrantes"</span><span class="p">:</span> <span class="n">PROYECTO</span><span class="p">[</span><span class="s2">"integrantes"</span><span class="p">],</span>
+    <span class="s2">"fase"</span><span class="p">:</span> <span class="s2">"F1"</span><span class="p">,</span>
+    <span class="s2">"fecha_ejecucion"</span><span class="p">:</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+    <span class="s2">"semilla"</span><span class="p">:</span> <span class="n">SEMILLA</span><span class="p">,</span>
+    <span class="s2">"python"</span><span class="p">:</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="s2">"sistema"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">platform</span><span class="o">.</span><span class="n">release</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+    <span class="s2">"interprete"</span><span class="p">:</span> <span class="n">ENTORNO</span><span class="p">[</span><span class="s2">"interprete"</span><span class="p">],</span>
+    <span class="s2">"entorno_virtual"</span><span class="p">:</span> <span class="n">ENTORNO</span><span class="p">[</span><span class="s2">"entorno_virtual"</span><span class="p">],</span>
+    <span class="s2">"dependencias"</span><span class="p">:</span> <span class="n">ENTORNO</span><span class="p">[</span><span class="s2">"versiones"</span><span class="p">],</span>
+    <span class="s2">"dataset"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"titulo"</span><span class="p">:</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"titulo"</span><span class="p">],</span>
+        <span class="s2">"archivo"</span><span class="p">:</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"archivo"</span><span class="p">]</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
+        <span class="s2">"filas"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">df_crudo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+        <span class="s2">"columnas"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">df_crudo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+        <span class="s2">"licencia"</span><span class="p">:</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"licencia"</span><span class="p">],</span>
+        <span class="s2">"doi"</span><span class="p">:</span> <span class="n">FICHA</span><span class="p">[</span><span class="s2">"doi"</span><span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">ARCHIVO_METADATOS</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span>
+        <span class="n">METADATOS</span><span class="p">,</span>
+        <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Archivos generados:"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">archivo</span> <span class="ow">in</span> <span class="p">[</span>
+    <span class="n">ARCHIVO_DICCIONARIO</span><span class="p">,</span>
+    <span class="n">ARCHIVO_EVALUACION</span><span class="p">,</span>
+    <span class="n">ARCHIVO_VINCULACION</span><span class="p">,</span>
+    <span class="n">ARCHIVO_METADATOS</span><span class="p">,</span>
+<span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">"  [OK]"</span><span class="p">,</span>
+        <span class="n">archivo</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">RAIZ</span><span class="p">),</span>
+        <span class="sa">f</span><span class="s2">"(</span><span class="si">{</span><span class="n">archivo</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span><span class="si">}</span><span class="s2"> bytes)"</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Archivos generados:
+  [OK] F1\docs\diccionario_variables.csv (805 bytes)
+  [OK] F1\docs\evaluacion_criterios_dataset.csv (407 bytes)
+  [OK] F1\docs\vinculacion_mapa_conceptual.csv (786 bytes)
+  [OK] F1\docs\metadatos_fase1.json (742 bytes)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b60f450b-3c89-4267-bd3f-5a5e8e0edf73">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="Conclusiones-y-trazabilidad"&gt;Conclusiones y trazabilidad<a class="anchor-link" href="#Conclusiones-y-trazabilidad">¶</a>&lt;/h2&gt;&lt;p&gt;La Fase 1 permitió definir la problemática de mantenimiento predictivo, formular
+la pregunta de investigación y establecer los objetivos del proyecto. También
+se comprobó el entorno de ejecución, la estructura del repositorio y la
+disponibilidad de las dependencias necesarias.&lt;/p&gt;
+&lt;p&gt;El archivo <code>ai4i2020.csv</code> contiene 10.000 registros y 14 columnas. La validación
+inicial no detectó valores faltantes ni filas duplicadas exactas. Las variables
+fueron clasificadas según su rol analítico y documentadas en un diccionario.&lt;/p&gt;
+&lt;p&gt;Los identificadores <code>UDI</code> y <code>Product ID</code> no serán utilizados como predictores.
+Los indicadores <code>TWF</code>, <code>HDF</code>, <code>PWF</code>, <code>OSF</code> y <code>RNF</code> tampoco se utilizarán para
+predecir <code>Machine failure</code>, porque podrían producir fuga de información.&lt;/p&gt;
+&lt;p&gt;La trazabilidad se mantiene mediante el notebook, el README, el historial de
+Git y los archivos generados en <code>F1/docs/</code>. La limpieza y transformación de los
+datos quedan reservadas para la Fase 2.&lt;/p&gt;
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c7a883f6-1a00-4456-b694-a0d8f9b62503">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="10.-Reflexi%C3%B3n-t%C3%A9cnica"&gt;10. Reflexión técnica<a class="anchor-link" href="#10.-Reflexi%C3%B3n-t%C3%A9cnica">¶</a>&lt;/h2&gt;&lt;h3 id="Hallazgos"&gt;Hallazgos<a class="anchor-link" href="#Hallazgos">¶</a>&lt;/h3&gt;<ul>
+<li>AI4I 2020 cumple los requisitos mínimos de tamaño y variedad de variables.</li>
+<li>El conjunto no presenta valores faltantes ni filas duplicadas exactas.</li>
+<li>El tipo almacenado por Python no determina por sí solo el rol analítico de
+una variable. Por ejemplo, <code>UDI</code> es numérica, pero funciona como identificador.</li>
+<li>La variable <code>Machine failure</code> está desbalanceada, por lo que será necesario
+considerar esta condición durante la evaluación posterior.</li>
+<li>El carácter sintético del conjunto limita la generalización de los resultados
+a maquinaria industrial real.</li>
+</ul>
+&lt;h3 id="Dificultades-y-soluciones"&gt;Dificultades y soluciones<a class="anchor-link" href="#Dificultades-y-soluciones">¶</a>&lt;/h3&gt;<ul>
+<li>Las rutas relativas fallaron inicialmente porque Jupyter se estaba ejecutando
+desde <code>F1/notebooks</code>. El problema se resolvió mediante una función que busca
+la raíz del proyecto.</li>
+<li>El entorno se verificó comprobando que el intérprete se encuentra dentro de
+<code>.venv</code> y registrando las versiones de las librerías.</li>
+<li>La información del proyecto se organizó en estructuras reutilizables para
+mantener coherencia entre validaciones y archivos de documentación.</li>
+</ul>
+&lt;h3 id="Decisiones-pendientes"&gt;Decisiones pendientes<a class="anchor-link" href="#Decisiones-pendientes">¶</a>&lt;/h3&gt;<ul>
+<li>Definir en la Fase 2 qué transformaciones son realmente necesarias, evitando
+aplicar técnicas sin una justificación basada en los datos.</li>
+<li>Determinar la estrategia de codificación para la variable <code>Type</code>.</li>
+<li>Decidir si las variables numéricas requieren escalamiento según el algoritmo
+utilizado en fases posteriores.</li>
+<li>Seleccionar métricas apropiadas para evaluar la variable objetivo
+desbalanceada.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9424c399-d7e5-4083-82e9-86802b5a1c7d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+&lt;h2 id="11.-Verificaci%C3%B3n-antes-de-entregar"&gt;11. Verificación antes de entregar<a class="anchor-link" href="#11.-Verificaci%C3%B3n-antes-de-entregar">¶</a>&lt;/h2&gt;&lt;h3 id="Cuaderno"&gt;Cuaderno<a class="anchor-link" href="#Cuaderno">¶</a>&lt;/h3&gt;<ul>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;Corre completo tras <code>Kernel → Restart Kernel and Run All Cells</code>.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;La numeración de ejecución es continua.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;Cada bloque de código tiene una explicación narrativa.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;Las rutas se construyen desde la raíz del proyecto.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;La semilla está declarada.</li>
+</ul>
+&lt;h3 id="Contenido-t%C3%A9cnico"&gt;Contenido técnico<a class="anchor-link" href="#Contenido-t%C3%A9cnico">¶</a>&lt;/h3&gt;<ul>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;La problemática y los objetivos están declarados.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;El alcance y las limitaciones están declarados.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;El entorno se verifica con evidencia.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;La procedencia de AI4I 2020 está documentada.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;El diccionario declara el rol de las 14 variables.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;El conjunto de datos fue evaluado según los criterios del curso.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;El módulo incluye pruebas normales, límite y de excepción.</li>
+</ul>
+&lt;h3 id="Archivos"&gt;Archivos<a class="anchor-link" href="#Archivos">¶</a>&lt;/h3&gt;<ul>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;<code>.gitignore</code> y <code>requirements.txt</code> tienen contenido.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;<code>README.md</code> documenta el proyecto.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;<code>F1/docs/</code> contiene el diccionario, la evaluación, la vinculación y los metadatos.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;<code>F1/src/utilidades.py</code> es importable.</li>
+</ul>
+&lt;h3 id="Repositorio"&gt;Repositorio<a class="anchor-link" href="#Repositorio">¶</a>&lt;/h3&gt;<ul>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;La carpeta <code>F1</code> contiene el notebook y sus documentos.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled checked/&gt;Git está configurado con el nombre y correo del autor.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled/&gt;El notebook ejecutado y los archivos generados están registrados en un commit.</li>
+<li class="task-list-item">&lt;input class="task-list-item-checkbox" type="checkbox" disabled/&gt;Los commits locales están enviados a GitHub.</li>
+</ul>
 </div>
 </div>
 </div>
