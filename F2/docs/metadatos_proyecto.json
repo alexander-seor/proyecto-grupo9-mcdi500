@@ -1,0 +1,39 @@
+{
+  "proyecto": {
+    "nombre": "Mantenimiento predictivo con AI4I 2020",
+    "fase": "F2",
+    "grupo": 9,
+    "semilla": 42
+  },
+  "datos": {
+    "archivo": "ai4i2020.csv",
+    "hash_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+    "filas": 10000,
+    "columnas": 14,
+    "fuente": {
+      "repositorio": "UCI Machine Learning Repository",
+      "doi": "10.24432/C5HS5C"
+    }
+  },
+  "decisiones": {
+    "objetivo": "Machine failure",
+    "identificadores_excluidos": [
+      "UDI",
+      "Product ID"
+    ],
+    "modos_excluidos": [
+      "TWF",
+      "HDF",
+      "PWF",
+      "OSF",
+      "RNF"
+    ],
+    "codificacion": "OneHotEncoder",
+    "escalamiento": "RobustScaler",
+    "division": {
+      "entrenamiento": "80 %",
+      "prueba": "20 %",
+      "estratificada": true
+    }
+  }
+}

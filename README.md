@@ -111,10 +111,7 @@ Estos puntos describen el procedimiento de trabajo; las verificaciones realizada
 - [x] Definición inicial de la problemática.
 - [x] Formulación de la pregunta de investigación.
 - [x] Elaboración del mapa conceptual del flujo reproducible.
-- [ ] Análisis exploratorio de datos.
-- [ ] Preparación de los datos.
-- [ ] Conclusiones de la Formativa 1.
-- [ ] Práctica conjunta de creación y resolución de un conflicto en un archivo de prueba.
+
 
 ## Requisitos y ejecución
 
@@ -309,3 +306,159 @@ En la evaluación predictiva se considerarán el balance de clases, la separaci�
 *AI4I 2020 predictive maintenance dataset* [Conjunto de datos]. (2020). UCI Machine Learning Repository. https://doi.org/10.24432/C5HS5C
 
 Novak, J. D., & Cañas, A. J. (2008). *The theory underlying concept maps and how to construct and use them* (Technical Report IHMC CmapTools 2006-01 Rev 01-2008). Florida Institute for Human and Machine Cognition. https://cmap.ihmc.us/docs/theory-of-concept-maps
+
+---
+
+## Actualización del avance F1–F2
+
+Esta sección complementa el registro inicial del README con la implementación realizada posteriormente. Las listas y proyecciones anteriores se conservan como evidencia de la planificación original; el estado actualizado se presenta a continuación.
+
+### Objetivos específicos actualizados
+
+1. Documentar la procedencia, estructura y roles analíticos de las variables de AI4I 2020.
+2. Configurar un entorno reproducible con dependencias, rutas y semilla controladas.
+3. Explorar tipos, nulos, duplicados, categorías, rangos, valores atípicos y distribución de la variable objetivo.
+4. Construir un pipeline de limpieza y transformación que evite fuga de información.
+5. Validar los resultados mediante comprobaciones de integridad y pruebas normales, límite y de excepción.
+6. Preparar conjuntos separados de entrenamiento y prueba para las fases posteriores.
+
+### Alcance, supuestos y limitaciones
+
+- El análisis se limita a las variables incluidas en AI4I 2020.
+- Se utilizan las unidades y definiciones publicadas por UCI.
+- El archivo es sintético y no representa una planta industrial específica.
+- La ausencia de valores faltantes evita la imputación, pero no garantiza que todas las observaciones sean representativas de maquinaria real.
+- Los valores extremos se conservan porque pueden representar condiciones operacionales relacionadas con fallas.
+- La Fase 2 prepara y valida los datos; todavía no estima el desempeño de un modelo predictivo.
+- El desbalance de `Machine failure` deberá considerarse al seleccionar métricas y métodos posteriores.
+
+### Estructura incorporada en F2
+
+```text
+F2/
+├── F2_preprocesamiento.ipynb
+├── data/
+│   └── processed/
+│       ├── ai4i2020_entrenamiento_procesado.csv
+│       └── ai4i2020_prueba_procesado.csv
+└── docs/
+    ├── F2_preprocesamiento.html
+    ├── diccionario_variables.csv
+    ├── metadatos_proyecto.csv
+    ├── metadatos_proyecto.json
+    └── resumen_transformaciones.csv
+```
+
+El notebook `F2/F2_preprocesamiento.ipynb` implementa el flujo:
+
+```text
+Obtener → Explorar → Limpiar → Transformar → Escalar → Validar → Guardar
+```
+
+### Resultados verificados en F2
+
+| Comprobación | Resultado |
+| --- | --- |
+| Dimensiones originales | 10.000 filas × 14 columnas |
+| Valores faltantes | 0 |
+| Duplicados exactos | 0 |
+| Distribución de `Type` | L: 6.000; M: 2.997; H: 1.003 |
+| Distribución del objetivo | Sin falla: 9.661; con falla: 339 |
+| Atípicos según IQR | Velocidad: 418; torque: 69 |
+| División estratificada | 8.000 registros de entrenamiento y 2.000 de prueba |
+| Dimensiones finales | 9 columnas numéricas en cada conjunto |
+| Validación | Sin nulos y con codificación One-Hot coherente |
+
+La variable objetivo contiene un 3,39 % de fallas. Por ello, una evaluación posterior no deberá depender únicamente de exactitud; será necesario considerar sensibilidad, precisión, F1 y otras métricas adecuadas.
+
+### Decisiones implementadas en F2
+
+| Decisión | Justificación |
+| --- | --- |
+| Mantener `F1/data/raw/ai4i2020.csv` sin cambios. | Preservar una entrada verificable mediante SHA-256. |
+| Guardar los resultados en `F2/data/processed/`. | Separar los productos procesados del archivo original. |
+| No imputar ni eliminar filas. | No se encontraron nulos ni duplicados exactos. |
+| Excluir `UDI` y `Product ID`. | Son identificadores y no condiciones operacionales. |
+| Excluir TWF, HDF, PWF, OSF y RNF de los predictores. | Evitar fuga de información desde indicadores asociados con la falla. |
+| Codificar `Type` mediante One-Hot. | Representar L, M y H sin asignar distancias numéricas artificiales. |
+| Dividir antes de escalar. | Evitar que el conjunto de prueba participe en el ajuste. |
+| Utilizar división estratificada. | Conservar aproximadamente la proporción de fallas. |
+| Aplicar `RobustScaler`. | Reducir la influencia de valores extremos sin eliminarlos. |
+
+### Entorno verificado
+
+| Componente | Versión utilizada |
+| --- | --- |
+| Python | 3.13.0 |
+| NumPy | 2.5.3 |
+| pandas | 3.0.5 |
+| Matplotlib | 3.11.2 |
+| scikit-learn | 1.9.1 |
+
+El listado completo se conserva en `requirements.txt`.
+
+### Orden actualizado de ejecución
+
+| Orden | Notebook | Función |
+| --- | --- | --- |
+| 1 | `F1/notebooks/F1_Definicion.ipynb` | Define la problemática, objetivos, alcance y entorno reproducible. |
+| 2 | `F1/notebooks/validador.ipynb` | Perfila el archivo y valida requisitos y roles analíticos. |
+| 3 | `F2/F2_preprocesamiento.ipynb` | Ejecuta obtención, exploración, limpieza, transformación, escalamiento, validación y persistencia. |
+
+Para exportar la Fase 2 a HTML desde la raíz del repositorio:
+
+```powershell
+python -m jupyter nbconvert --to html "F2/F2_preprocesamiento.ipynb" --output-dir "F2/docs"
+```
+
+Antes de compartir resultados, ejecutar cada notebook mediante **Kernel → Restart Kernel and Run All Cells** y guardar la versión sin errores.
+
+### Vinculación actualizada con el mapa conceptual
+
+| Elemento del mapa | Implementación | Evidencia |
+| --- | --- | --- |
+| Delimitar el problema | Problemática, pregunta, objetivos, alcance y limitaciones | Notebook F1 |
+| Preparar el entorno | `.venv`, dependencias, semilla y versiones | `requirements.txt` y notebooks |
+| Preservar los datos | Original en F1 y derivados en F2 | Carpetas `raw/` y `processed/` |
+| Validar y describir | Tipos, nulos, duplicados, rangos, categorías y objetivo | Notebooks y `docs/` |
+| Limpiar y transformar | Selección, casting, One-Hot y RobustScaler | Notebook F2 |
+| Verificar el código | Casos normales, límite y excepciones | Apartado 6 de F2 |
+| Documentar evidencia | Diccionarios, metadatos, resúmenes y HTML | `F1/docs/` y `F2/docs/` |
+| Controlar versiones | Commits descriptivos y repositorio GitHub | Historial de Git |
+| Modelar y comunicar | Trabajo proyectado | Fases 3 y 4 |
+
+### Estado actualizado
+
+#### Fase 1
+
+- [x] Problemática, pregunta, objetivos, alcance y limitaciones.
+- [x] Entorno reproducible y estructura del repositorio.
+- [x] Dataset, diccionario y evaluación de criterios.
+- [x] Mapa conceptual, metadatos y documentación.
+- [x] Notebook ejecutado y exportado.
+
+#### Fase 2
+
+- [x] Obtención y exploración inicial.
+- [x] Limpieza y selección de variables.
+- [x] Codificación One-Hot y escalamiento.
+- [x] División estratificada de entrenamiento y prueba.
+- [x] Validación técnica y pruebas de funciones.
+- [x] Persistencia de datasets y documentación.
+- [x] Notebook ejecutado sin errores y exportado a HTML.
+- [ ] Registro de F2 mediante commit y envío a GitHub.
+- [ ] Informe técnico integrado de F1 y F2 en PDF.
+
+### Colaboración y contribución individual
+
+El desarrollo actual corresponde a un solo integrante. Los commits configurados con su nombre y correo constituyen la evidencia individual. En un equipo, el flujo equivalente incorporaría ramas, revisión de cambios y resolución de conflictos antes de integrar a `main`. No se atribuyen contribuciones a personas inexistentes.
+
+
+
+### Referencias técnicas complementarias
+
+JupyterLab. (s. f.). *JupyterLab documentation*. https://jupyterlab.readthedocs.io/
+
+pandas development team. (s. f.). *pandas documentation*. https://pandas.pydata.org/docs/
+
+scikit-learn developers. (s. f.). *Preprocessing data*. https://scikit-learn.org/stable/modules/preprocessing.html

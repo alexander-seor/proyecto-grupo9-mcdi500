@@ -1,0 +1,15 @@
+﻿variable,rol_analitico,descripcion,unidad,uso_como_predictor,tipo_observado,valores_unicos,porcentaje_nulos,tratamiento_f2
+UDI,identificador,Identificador único del registro,,No,int64,10000,0.0,Excluir de los predictores
+Product ID,identificador,Identificador del producto,,No,str,10000,0.0,Excluir de los predictores
+Type,nominal,"Tipo de producto: L, M o H",,Sí,str,3,0.0,Codificación One-Hot
+Air temperature [K],continua,Temperatura del aire,K,Sí,float64,93,0.0,Evaluar escalamiento
+Process temperature [K],continua,Temperatura del proceso,K,Sí,float64,82,0.0,Evaluar escalamiento
+Rotational speed [rpm],continua,Velocidad de rotación,rpm,Sí,int64,941,0.0,Evaluar escalamiento
+Torque [Nm],continua,Torque aplicado,Nm,Sí,float64,577,0.0,Evaluar escalamiento
+Tool wear [min],discreta,Desgaste acumulado de la herramienta,min,Sí,int64,246,0.0,Evaluar escalamiento
+Machine failure,binaria,Variable objetivo: 1 indica falla,,Objetivo,int64,2,0.0,Conservar como objetivo
+TWF,binaria,Falla por desgaste de herramienta,,No,int64,2,0.0,Excluir por fuga de información
+HDF,binaria,Falla por disipación de calor,,No,int64,2,0.0,Excluir por fuga de información
+PWF,binaria,Falla de potencia,,No,int64,2,0.0,Excluir por fuga de información
+OSF,binaria,Falla por sobreesfuerzo,,No,int64,2,0.0,Excluir por fuga de información
+RNF,binaria,Falla aleatoria,,No,int64,2,0.0,Excluir por fuga de información

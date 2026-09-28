@@ -1,0 +1,6 @@
+﻿etapa,filas,columnas,nulos,detalle
+Datos originales,10000,14,0,Archivo original sin modificar
+Limpieza y selección,10000,7,0,Identificadores y modos de falla excluidos
+Codificación One-Hot,10000,9,0,Type transformado en tres columnas
+Entrenamiento escalado,8000,9,0,RobustScaler ajustado con entrenamiento
+Prueba escalada,2000,9,0,Transformada sin reajustar el escalador

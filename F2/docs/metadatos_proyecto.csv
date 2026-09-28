@@ -1,0 +1,19 @@
+﻿clave,valor
+proyecto.nombre,Mantenimiento predictivo con AI4I 2020
+proyecto.fase,F2
+proyecto.grupo,9
+proyecto.semilla,42
+datos.archivo,ai4i2020.csv
+datos.hash_sha256,dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e
+datos.filas,10000
+datos.columnas,14
+datos.fuente.repositorio,UCI Machine Learning Repository
+datos.fuente.doi,10.24432/C5HS5C
+decisiones.objetivo,Machine failure
+decisiones.identificadores_excluidos,"UDI, Product ID"
+decisiones.modos_excluidos,"TWF, HDF, PWF, OSF, RNF"
+decisiones.codificacion,OneHotEncoder
+decisiones.escalamiento,RobustScaler
+decisiones.division.entrenamiento,80 %
+decisiones.division.prueba,20 %
+decisiones.division.estratificada,True
