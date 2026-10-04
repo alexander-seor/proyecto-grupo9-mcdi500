@@ -1,0 +1,77 @@
+{
+  "proyecto": "Análisis de condiciones operacionales y fallas con AI4I 2020",
+  "fase": "F4",
+  "grupo": 9,
+  "autor": "Alexander Sepúlveda Ormazábal",
+  "fecha_ejecucion": "2026-10-04",
+  "semilla": 42,
+  "filas": 10000,
+  "fallas": 339,
+  "figuras_generadas": {
+    "apoyo_balance": "F4\\figuras\\figura_0_balance_objetivo.png",
+    "1": "F4\\figuras\\figura_1_tasa_por_tipo.png",
+    "2": "F4\\figuras\\figura_2_tasas_por_quintiles.png",
+    "3": "F4\\figuras\\figura_3_interaccion_operacional.png"
+  },
+  "entradas_f3": {
+    "entrenamiento": {
+      "ruta": "F3\\data\\processed\\ai4i2020_entrenamiento_procesado.csv",
+      "sha256": "09c9afdfef5c4ff3d3b92477f449a00138a1a5092aa8d2655d856e0738dc2a26"
+    },
+    "prueba": {
+      "ruta": "F3\\data\\processed\\ai4i2020_prueba_procesado.csv",
+      "sha256": "6198556d648b54774d68d3bdaa800fa61105c7198be526224149e0cde39ab60b"
+    },
+    "diccionario": {
+      "ruta": "F3\\data\\processed\\diccionario_f3.csv",
+      "sha256": "9c0b97aa1d1c28c0672794c530554426aa87b66f310d1ed6d842a74b01a43d9a"
+    },
+    "parametros": {
+      "ruta": "F3\\data\\processed\\parametros_f3.csv",
+      "sha256": "1ff962cf348adcbd2e4d11ec44e3a63388cc518ab21a11ecf2b02798ac3d4f45"
+    }
+  },
+  "validacion_descriptiva": {
+    "cortes_calculados_con": "entrenamiento",
+    "velocidad_maxima_rpm": 1422.0,
+    "torque_minimo_nm": 46.8,
+    "desgaste_minimo_min": 174.0,
+    "tasas_por_particion": [
+      {
+        "particion": "Entrenamiento",
+        "grupo": "Perfil combinado",
+        "registros": 273,
+        "fallas": 79,
+        "tasa_pct": 28.94
+      },
+      {
+        "particion": "Entrenamiento",
+        "grupo": "Resto",
+        "registros": 7727,
+        "fallas": 192,
+        "tasa_pct": 2.48
+      },
+      {
+        "particion": "Prueba",
+        "grupo": "Perfil combinado",
+        "registros": 80,
+        "fallas": 22,
+        "tasa_pct": 27.5
+      },
+      {
+        "particion": "Prueba",
+        "grupo": "Resto",
+        "registros": 1920,
+        "fallas": 46,
+        "tasa_pct": 2.4
+      }
+    ]
+  },
+  "limitaciones": [
+    "AI4I 2020 es sintético.",
+    "La clase de falla representa 3,39 %.",
+    "Los cortes son cuantiles descriptivos.",
+    "No se evaluó un modelo predictivo.",
+    "Las asociaciones no demuestran causalidad."
+  ]
+}

@@ -1,0 +1,9 @@
+﻿desgaste_grupo,torque_grupo,velocidad_grupo,registros,fallas,tasa_pct
+Alto (≥ 174 min),"Alto (> 46,8 Nm)",Baja (≤ 1422 rpm),353,101,28.61
+Alto (≥ 174 min),"Alto (> 46,8 Nm)",Resto (> 1422 rpm),131,9,6.87
+Alto (≥ 174 min),"Resto (≤ 46,8 Nm)",Baja (≤ 1422 rpm),144,12,8.33
+Alto (≥ 174 min),"Resto (≤ 46,8 Nm)",Resto (> 1422 rpm),1374,39,2.84
+Menor (< 174 min),"Alto (> 46,8 Nm)",Baja (≤ 1422 rpm),1476,128,8.67
+Menor (< 174 min),"Alto (> 46,8 Nm)",Resto (> 1422 rpm),511,6,1.17
+Menor (< 174 min),"Resto (≤ 46,8 Nm)",Baja (≤ 1422 rpm),511,14,2.74
+Menor (< 174 min),"Resto (≤ 46,8 Nm)",Resto (> 1422 rpm),5500,30,0.55

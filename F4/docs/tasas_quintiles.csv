@@ -1,0 +1,26 @@
+﻿quintil,registros,fallas,tasa_pct,variable,desde,hasta
+Q1,2135,46,2.15,Air temperature [K],295.3,298.1
+Q2,1904,48,2.52,Air temperature [K],298.1,299.2
+Q3,2091,41,1.96,Air temperature [K],299.2,300.6
+Q4,1877,60,3.2,Air temperature [K],300.6,301.9
+Q5,1993,144,7.23,Air temperature [K],301.9,304.5
+Q1,2168,54,2.49,Process temperature [K],305.7,308.6
+Q2,2043,35,1.71,Process temperature [K],308.6,309.6
+Q3,1924,92,4.78,Process temperature [K],309.6,310.5
+Q4,1944,83,4.27,Process temperature [K],310.5,311.3
+Q5,1921,75,3.9,Process temperature [K],311.3,313.8
+Q1,2007,244,12.16,Rotational speed [rpm],1168.0,1405.0
+Q2,2011,29,1.44,Rotational speed [rpm],1405.0,1470.0
+Q3,1999,12,0.6,Rotational speed [rpm],1470.0,1541.0
+Q4,1992,9,0.45,Rotational speed [rpm],1541.0,1644.0
+Q5,1991,45,2.26,Rotational speed [rpm],1644.0,2886.0
+Q1,2002,47,2.35,Torque [Nm],3.8,31.4
+Q2,2012,9,0.45,Torque [Nm],31.4,37.5
+Q3,2018,12,0.59,Torque [Nm],37.5,42.7
+Q4,1985,43,2.17,Torque [Nm],42.7,48.3
+Q5,1983,228,11.5,Torque [Nm],48.3,76.6
+Q1,2027,48,2.37,Tool wear [min],0.0,42.0
+Q2,2006,42,2.09,Tool wear [min],42.0,86.0
+Q3,2014,47,2.33,Tool wear [min],86.0,130.0
+Q4,1999,43,2.15,Tool wear [min],130.0,174.0
+Q5,1954,159,8.14,Tool wear [min],174.0,253.0

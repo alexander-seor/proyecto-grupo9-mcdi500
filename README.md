@@ -426,7 +426,7 @@ Antes de compartir resultados, ejecutar cada notebook mediante **Kernel → Rest
 | Documentar evidencia | Diccionarios, metadatos, resúmenes y HTML | `F1/docs/` y `F2/docs/` |
 | Controlar versiones | Commits descriptivos y repositorio GitHub | Historial de Git |
 | Desarrollar el núcleo algorítmico | Implementado | Fase 3, módulos, pruebas y mediciones |
-| Analizar y comunicar | Trabajo proyectado | Fase 4 |
+| Analizar y comunicar | Implementado | Fase 4, tablas, figuras y validación descriptiva |
 
 ### Estado actualizado
 
@@ -555,3 +555,113 @@ python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreproces
 - [x] Notebook ejecutado completamente sin errores.
 - [x] Diccionario y parámetros preparados para el traspaso a F4.
 - [x] Informe de la Sumativa 2 generado en DOCX y PDF.
+
+## Actualización de la Fase 4
+
+### Propósito del cierre
+
+La Fase 4 integra los productos de las tres fases anteriores para analizar y
+comunicar las asociaciones observadas entre las condiciones operacionales y la
+ocurrencia de fallas. La caracterización es descriptiva. El proyecto no entrena
+un modelo ni estima capacidad predictiva.
+
+### Estructura implementada
+
+```text
+F4/
+├── F4_Consolidado_Proyecto.ipynb
+├── README.md
+├── data/
+│   └── processed/
+│       └── ai4i2020_visualizacion.csv
+├── docs/
+│   ├── interaccion_operacional.csv
+│   ├── mapa_objetivos_figuras.csv
+│   ├── metadatos_fase4.json
+│   ├── resumen_objetivo.csv
+│   ├── resumen_variables_operacionales.csv
+│   ├── tasas_quintiles.csv
+│   ├── tasas_tipo_producto.csv
+│   ├── trazabilidad_mejoras.csv
+│   └── validacion_perfil.csv
+└── figuras/
+    ├── figura_0_balance_objetivo.png
+    ├── figura_1_tasa_por_tipo.png
+    ├── figura_2_tasas_por_quintiles.png
+    └── figura_3_interaccion_operacional.png
+```
+
+### Integración de las fases
+
+| Fase | Aporte utilizado en el cierre |
+| --- | --- |
+| F1 | Problemática, pregunta, objetivos, datos originales y límites del proyecto. |
+| F2 | Selección de variables, división estratificada, codificación y escalamiento. |
+| F3 | Pipeline modular, clases, pruebas, mediciones y cuatro artefactos de transición. |
+| F4 | Copia interpretable, análisis descriptivo, visualizaciones, validación y comunicación. |
+
+F4 recupera las unidades mediante `original = escalado × IQR + mediana` y
+reconstruye `Type` desde las columnas One Hot. La copia resultante se compara
+con F1 para confirmar que contiene las mismas 10.000 filas.
+
+### Resultados principales
+
+- `Machine failure` aparece en 339 registros, equivalentes al 3,39 %.
+- El tipo L presenta una tasa de 3,92 %, frente a 2,77 % en M y 2,09 % en H.
+- Los patrones individuales más marcados aparecen con velocidad baja y torque
+  alto.
+- El perfil de velocidad de hasta 1.422 rpm, torque superior a 46,8 Nm y
+  desgaste de al menos 174 minutos registra 28,94 % en entrenamiento y 27,50 %
+  en prueba. El resto registra 2,48 % y 2,40 %.
+
+Los cortes se obtuvieron solo con entrenamiento y se aplicaron sin cambios a
+prueba. Esta comprobación fortalece la observación descriptiva, pero no mide el
+rendimiento de un clasificador ni define límites industriales.
+
+### Figuras principales
+
+1. **Contexto:** tasa de falla según los códigos H, L y M de `Type`, comparada
+   con la tasa global.
+2. **Contraste:** recorrido de la tasa entre quintiles para las cinco variables
+   operacionales.
+3. **Resolución:** interacción entre velocidad, torque y desgaste.
+
+La figura del balance de la variable objetivo queda como apoyo del notebook.
+
+### Orden final de ejecución
+
+| Orden | Notebook | Función |
+| --- | --- | --- |
+| 1 | `F1/notebooks/F1_Definicion.ipynb` | Define la problemática, los objetivos, el alcance y el entorno. |
+| 2 | `F1/notebooks/validador.ipynb` | Perfila los datos y valida los requisitos y roles analíticos. |
+| 3 | `F2/F2_preprocesamiento.ipynb` | Obtiene, limpia, transforma, escala y guarda los datos. |
+| 4 | `F3/S2_F3_NucleoAlgoritmico_Eficiencia_POO.ipynb` | Modulariza el pipeline, aplica POO y compara eficiencia. |
+| 5 | `F4/F4_Consolidado_Proyecto.ipynb` | Integra las fases, recupera unidades, analiza, valida y genera las figuras finales. |
+
+### Estado de la Fase 4
+
+- [x] Cuatro artefactos de F3 cargados y verificados.
+- [x] Evidencia de pruebas, equivalencia y eficiencia de F3 integrada.
+- [x] Categorías y unidades recuperadas sin volver a ajustar el pipeline.
+- [x] Equivalencia con las siete variables analíticas de F1 comprobada.
+- [x] Copia interpretable y tablas de respaldo guardadas.
+- [x] Tres figuras principales y una figura de apoyo exportadas.
+- [x] Perfil combinado validado de forma descriptiva en entrenamiento y prueba.
+- [x] Metadatos y huellas SHA-256 de las entradas guardados.
+- [x] Notebook ejecutado con 20 celdas de código continuas y sin errores.
+
+### Límites del resultado
+
+- El conjunto es sintético y no representa una planta industrial específica.
+- Las asociaciones observadas no demuestran causalidad.
+- Los cuantiles no son umbrales operacionales universales.
+- La clase positiva está desbalanceada.
+- La evaluación predictiva formal queda como trabajo posterior.
+
+### Entregables finales de la Fase 4
+
+- `informe_f4_grupo9.docx` y `informe_f4_grupo9.pdf`: informe final editable y versión PDF de 10 páginas.
+- `F4/presentacion_f4_grupo9.pptx`: presentación de 8 diapositivas con notas del expositor.
+- `F4/docs/guion_presentacion_f4.md`: guion de apoyo para una exposición estimada en 6 minutos y 45 segundos.
+
+La grabación y publicación del video en Canvas Studio queda a cargo del autor.

@@ -1,0 +1,5 @@
+﻿figura,objetivo_F1,pregunta,aporte,uso
+Apoyo,OE1: caracterizar variables operacionales y la variable de falla,¿Cuál es la magnitud general de las fallas?,Documenta el desbalance 9.661 frente a 339.,Notebook y posible anexo
+Figura 1,OE4: explorar la relación entre Type y la ocurrencia de fallas,¿La tasa cambia según Type?,"Compara H, M y L con la tasa global.","Notebook, informe y presentación"
+Figura 2,OE4: explorar la relación entre las cinco variables y las fallas,¿Cómo varía la tasa en las cinco mediciones?,Cubre todas las variables operacionales mediante quintiles.,"Notebook, informe y presentación"
+Figura 3,OE5: evaluar si las variables permiten reconocer situaciones de mayor riesgo,¿Qué combinación concentra más fallas?,"Integra velocidad, torque y desgaste.","Notebook, informe y presentación"

@@ -1,0 +1,5 @@
+﻿origen,observacion,accion,evidencia,impacto
+Retroalimentación F1-F2,AI4I es sintético y no presenta problemas reales de limpieza.,Se mantuvo el conjunto autorizado sin introducir nulos o duplicados artificiales.,Validación de F1 y F2; discusión de F4.,Las limitaciones quedan declaradas con honestidad.
+F2 a F3,Las transformaciones que aprenden parámetros deben ajustarse con entrenamiento.,F3 dividió antes de ajustar el codificador y los escaladores.,Pipeline modular y parámetros persistidos en F3.,Se evita que prueba participe en el ajuste.
+F3 a F4,Los datos escalados y One Hot no son adecuados para comunicar resultados.,Se creó una copia interpretable mediante inversión de RobustScaler y reconstrucción de Type.,Sección 4 y comparación formal con F1.,"Los gráficos recuperan K, rpm, Nm, minutos y categorías."
+Cierre F4,Las figuras deben responder a los objetivos y declarar límites.,Se organizaron cuatro figuras y tres principales con narrativa contexto-contraste-resolución.,Sección 6 y mapa de correspondencia.,Cada conclusión puede rastrearse hasta una tabla o figura.

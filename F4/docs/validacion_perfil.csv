@@ -1,0 +1,5 @@
+﻿particion,grupo,registros,fallas,tasa_pct
+Entrenamiento,Perfil combinado,273,79,28.94
+Entrenamiento,Resto,7727,192,2.48
+Prueba,Perfil combinado,80,22,27.5
+Prueba,Resto,1920,46,2.4

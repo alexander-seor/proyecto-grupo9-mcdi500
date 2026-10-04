@@ -1,0 +1,6 @@
+﻿variable,mediana_sin_falla,mediana_con_falla,media_sin_falla,media_con_falla,diferencia_estandarizada,magnitud_diferencia
+Torque [Nm],39.9,53.7,39.63,50.168,1.057,1.057
+Tool wear [min],107.0,165.0,106.694,143.782,0.583,0.583
+Air temperature [K],300.0,301.6,299.974,300.886,0.456,0.456
+Rotational speed [rpm],1507.0,1365.0,1540.26,1496.487,-0.244,0.244
+Process temperature [K],310.0,310.4,309.996,310.29,0.199,0.199
