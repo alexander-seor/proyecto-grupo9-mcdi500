@@ -121,7 +121,6 @@ python -m jupyter nbconvert --to notebook --execute --inplace `
 - `../informe_f4_grupo9.docx`: versión editable del informe final.
 - `../informe_f4_grupo9.pdf`: informe final de 10 páginas.
 - `presentacion_f4_grupo9.pptx`: presentación de 8 diapositivas para apoyar el video.
-- `docs/guion_presentacion_f4.md`: guion de apoyo con una duración estimada de 6 minutos y 45 segundos.
 
 La presentación resume el problema, la continuidad entre las fases, las tres
 figuras principales, la validación descriptiva y las conclusiones. El video de

@@ -660,8 +660,9 @@ La figura del balance de la variable objetivo queda como apoyo del notebook.
 
 ### Entregables finales de la Fase 4
 
+- `changelog.md`: registro de mejoras vinculado con commits reales del repositorio.
+
 - `informe_f4_grupo9.docx` y `informe_f4_grupo9.pdf`: informe final editable y versión PDF de 10 páginas.
 - `F4/presentacion_f4_grupo9.pptx`: presentación de 8 diapositivas con notas del expositor.
-- `F4/docs/guion_presentacion_f4.md`: guion de apoyo para una exposición estimada en 6 minutos y 45 segundos.
 
 La grabación y publicación del video en Canvas Studio queda a cargo del autor.
