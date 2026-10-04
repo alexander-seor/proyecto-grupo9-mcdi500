@@ -1,0 +1,10 @@
+﻿columna,tipo,rol,origen,nulos
+Air temperature [K],float64,predictora escalada,variable operacional original,0
+Process temperature [K],float64,predictora escalada,variable operacional original,0
+Rotational speed [rpm],float64,predictora escalada,variable operacional original,0
+Torque [Nm],float64,predictora escalada,variable operacional original,0
+Tool wear [min],float64,predictora escalada,variable operacional original,0
+Type_H,int8,predictora codificada,derivada de Type,0
+Type_L,int8,predictora codificada,derivada de Type,0
+Type_M,int8,predictora codificada,derivada de Type,0
+Machine failure,int64,objetivo,variable objetivo,0

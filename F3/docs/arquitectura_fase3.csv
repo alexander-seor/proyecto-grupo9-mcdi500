@@ -1,0 +1,8 @@
+﻿componente,tipo,responsabilidad,archivo
+Transformador,clase base,Define la interfaz común y controla el estado.,F3/src/transformadores.py
+CodificadorOneHot,clase hija,Convierte una categoría en columnas binarias.,F3/src/transformadores.py
+EscaladorRobusto,clase hija,Escala una variable mediante mediana e IQR.,F3/src/transformadores.py
+Pipeline,orquestador,Ejecuta los transformadores en orden.,F3/src/pipeline.py
+FabricaTransformadores,fábrica,Crea transformadores según el tipo de variable.,F3/src/fabrica.py
+buscar_raiz y cargar_csv,funciones,Localizan el proyecto y validan los archivos.,F3/src/carga.py
+medir_recursos,función,Mide tiempo y memoria de una ejecución.,F3/src/medicion.py

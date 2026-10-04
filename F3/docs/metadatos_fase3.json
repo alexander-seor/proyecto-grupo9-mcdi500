@@ -1,0 +1,39 @@
+{
+  "proyecto": {
+    "nombre": "Mantenimiento predictivo con AI4I 2020",
+    "fase": "F3",
+    "grupo": 9,
+    "fecha": "2026-10-04",
+    "semilla": 42
+  },
+  "datos": {
+    "naturaleza": "sintético",
+    "entrenamiento_filas": 8000,
+    "prueba_filas": 2000,
+    "columnas_finales": 9,
+    "objetivo": "Machine failure"
+  },
+  "arquitectura": {
+    "patron": "Factory",
+    "cantidad_transformadores": 6,
+    "modulos": [
+      "F3/src/transformadores.py",
+      "F3/src/pipeline.py",
+      "F3/src/fabrica.py",
+      "F3/src/carga.py",
+      "F3/src/medicion.py"
+    ]
+  },
+  "validacion": {
+    "coincide_con_fase2": true,
+    "caso_normal": true,
+    "caso_limite": true,
+    "excepciones_controladas": true
+  },
+  "eficiencia": {
+    "funcional_tiempo_promedio_s": 0.013266740000108256,
+    "poo_tiempo_promedio_s": 0.037320219993125646,
+    "funcional_memoria_mib": 0.6630687713623047,
+    "poo_memoria_mib": 1.2392902374267578
+  }
+}

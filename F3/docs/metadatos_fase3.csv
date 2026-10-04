@@ -1,0 +1,22 @@
+﻿clave,valor
+proyecto.nombre,Mantenimiento predictivo con AI4I 2020
+proyecto.fase,F3
+proyecto.grupo,9
+proyecto.fecha,2026-10-04
+proyecto.semilla,42
+datos.naturaleza,sintético
+datos.entrenamiento_filas,8000
+datos.prueba_filas,2000
+datos.columnas_finales,9
+datos.objetivo,Machine failure
+arquitectura.patron,Factory
+arquitectura.cantidad_transformadores,6
+arquitectura.modulos,"F3/src/transformadores.py, F3/src/pipeline.py, F3/src/fabrica.py, F3/src/carga.py, F3/src/medicion.py"
+validacion.coincide_con_fase2,True
+validacion.caso_normal,True
+validacion.caso_limite,True
+validacion.excepciones_controladas,True
+eficiencia.funcional_tiempo_promedio_s,0.013266740000108256
+eficiencia.poo_tiempo_promedio_s,0.037320219993125646
+eficiencia.funcional_memoria_mib,0.6630687713623047
+eficiencia.poo_memoria_mib,1.2392902374267578

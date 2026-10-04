@@ -425,7 +425,8 @@ Antes de compartir resultados, ejecutar cada notebook mediante **Kernel → Rest
 | Verificar el código | Casos normales, límite y excepciones | Apartado 6 de F2 |
 | Documentar evidencia | Diccionarios, metadatos, resúmenes y HTML | `F1/docs/` y `F2/docs/` |
 | Controlar versiones | Commits descriptivos y repositorio GitHub | Historial de Git |
-| Modelar y comunicar | Trabajo proyectado | Fases 3 y 4 |
+| Desarrollar el núcleo algorítmico | Implementado | Fase 3, módulos, pruebas y mediciones |
+| Analizar y comunicar | Trabajo proyectado | Fase 4 |
 
 ### Estado actualizado
 
@@ -446,8 +447,8 @@ Antes de compartir resultados, ejecutar cada notebook mediante **Kernel → Rest
 - [x] Validación técnica y pruebas de funciones.
 - [x] Persistencia de datasets y documentación.
 - [x] Notebook ejecutado sin errores y exportado a HTML.
-- [ ] Registro de F2 mediante commit y envío a GitHub.
-- [ ] Informe técnico integrado de F1 y F2 en PDF.
+- [x] Registro de F2 mediante commit y envío a GitHub.
+- [x] Informe técnico integrado de F1 y F2 en PDF.
 
 ### Colaboración y contribución individual
 
@@ -462,3 +463,95 @@ JupyterLab. (s. f.). *JupyterLab documentation*. https://jupyterlab.readthedocs.
 pandas development team. (s. f.). *pandas documentation*. https://pandas.pydata.org/docs/
 
 scikit-learn developers. (s. f.). *Preprocessing data*. https://scikit-learn.org/stable/modules/preprocessing.html
+
+## Actualización de la Fase 3
+
+### Propósito
+
+La Fase 3 reorganiza el preprocesamiento construido en la Fase 2 como una solución modular y reutilizable. El objetivo es conservar exactamente las mismas transformaciones, pero distribuir las responsabilidades entre funciones, clases y módulos que puedan validarse y mantenerse por separado.
+
+### Estructura implementada
+
+```text
+F3/
+├── S2_F3_NucleoAlgoritmico_Eficiencia_POO.ipynb
+├── README.md
+├── data/
+│   └── processed/
+│       ├── ai4i2020_entrenamiento_procesado.csv
+│       ├── ai4i2020_prueba_procesado.csv
+│       ├── diccionario_f3.csv
+│       └── parametros_f3.csv
+├── docs/
+│   ├── arquitectura_fase3.csv
+│   ├── comparacion_eficiencia.csv
+│   ├── crecimiento_temporal.csv
+│   ├── metadatos_fase3.csv
+│   └── metadatos_fase3.json
+└── src/
+    ├── __init__.py
+    ├── carga.py
+    ├── fabrica.py
+    ├── medicion.py
+    ├── pipeline.py
+    └── transformadores.py
+```
+
+### Componentes principales
+
+| Componente | Responsabilidad |
+| --- | --- |
+| `carga.py` | Lee los archivos y comprueba su existencia y estructura. |
+| `transformadores.py` | Define la clase base y las clases que seleccionan, codifican y escalan variables. |
+| `pipeline.py` | Ordena los transformadores y ejecuta el flujo completo. |
+| `fabrica.py` | Crea los transformadores desde una configuración centralizada mediante el patrón Factory. |
+| `medicion.py` | Mide tiempo de ejecución y memoria máxima utilizada. |
+| Notebook F3 | Integra las pruebas, comparaciones, resultados e interpretación. |
+
+### Principios aplicados
+
+- **Herencia:** los transformadores comparten una clase base común.
+- **Polimorfismo:** cada transformador responde a los métodos `ajustar` y `transformar`, aunque ejecuta una tarea distinta.
+- **Encapsulamiento:** los parámetros aprendidos se conservan dentro de cada objeto y se validan antes de transformar datos.
+- **Cohesión:** cada clase o módulo tiene una responsabilidad concreta.
+- **Bajo acoplamiento:** el pipeline coordina objetos mediante una interfaz común y no depende de sus detalles internos.
+- **Factory:** la creación de transformadores se concentra en una fábrica, lo que facilita cambiar la configuración sin modificar el pipeline.
+
+### Resultados verificados en F3
+
+- El flujo funcional y el flujo orientado a objetos producen los mismos conjuntos procesados que la Fase 2.
+- Se probaron casos normales, casos límite y excepciones controladas.
+- Se midieron tiempo y memoria para comparar ambas implementaciones.
+- En esta escala, la alternativa funcional fue más rápida y utilizó menos memoria. La alternativa orientada a objetos se conserva porque facilita la reutilización, la validación y el mantenimiento del proceso.
+- El crecimiento observado fue compatible con un recorrido lineal respecto del número de filas, aunque los tiempos breves pueden variar entre ejecuciones.
+- Los cuatro artefactos de transición y los cinco documentos de apoyo fueron guardados y verificados.
+- La última ejecución contiene 31 celdas de código consecutivas y ninguna salida de error.
+
+### Orden actualizado de ejecución
+
+| Orden | Notebook | Función |
+| --- | --- | --- |
+| 1 | `F1/notebooks/F1_Definicion.ipynb` | Define la problemática, los objetivos, el alcance y el entorno. |
+| 2 | `F1/notebooks/validador.ipynb` | Perfila los datos y valida los requisitos y roles analíticos. |
+| 3 | `F2/F2_preprocesamiento.ipynb` | Obtiene, limpia, transforma, escala y guarda los datos. |
+| 4 | `F3/S2_F3_NucleoAlgoritmico_Eficiencia_POO.ipynb` | Modulariza el pipeline, aplica POO y compara eficiencia. |
+
+Para ejecutar y guardar nuevamente el notebook de F3 desde la raíz del repositorio:
+
+```powershell
+python -m jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=900 "F3/S2_F3_NucleoAlgoritmico_Eficiencia_POO.ipynb"
+```
+
+### Estado de la Fase 3
+
+- [x] Datos de F2 integrados y verificados.
+- [x] Implementación funcional utilizada como referencia.
+- [x] Clases con herencia, polimorfismo y encapsulamiento.
+- [x] Pipeline modular y patrón Factory.
+- [x] Pruebas normales, límite y de excepción.
+- [x] Medición de tiempo, memoria y crecimiento por tamaño.
+- [x] Módulos importables desde `F3/src/`.
+- [x] Resultados y metadatos guardados en `F3/data/` y `F3/docs/`.
+- [x] Notebook ejecutado completamente sin errores.
+- [x] Diccionario y parámetros preparados para el traspaso a F4.
+- [x] Informe de la Sumativa 2 generado en DOCX y PDF.

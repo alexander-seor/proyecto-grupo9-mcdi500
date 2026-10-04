@@ -1,0 +1,7 @@
+﻿orden,transformador,columna,parametros_aprendidos
+1,CodificadorOneHot,Type,"Type_H, Type_L, Type_M"
+2,EscaladorRobusto,Air temperature [K],mediana=300.1; iqr=3.1999999999999886
+3,EscaladorRobusto,Process temperature [K],mediana=310.1; iqr=2.3000000000000114
+4,EscaladorRobusto,Rotational speed [rpm],mediana=1503.0; iqr=191.0
+5,EscaladorRobusto,Torque [Nm],mediana=40.1; iqr=13.599999999999994
+6,EscaladorRobusto,Tool wear [min],mediana=107.0; iqr=110.0
