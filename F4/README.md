@@ -32,6 +32,7 @@ que la reconstrucción mantiene las mismas filas, aunque estén en otro orden.
 F4/
 ├── F4_Consolidado_Proyecto.ipynb
 ├── README.md
+├── presentacion_f4_grupo9.pptx
 ├── data/
 │   └── processed/
 │       └── ai4i2020_visualizacion.csv

@@ -17,3 +17,5 @@ desktop.ini
 # Guía personal, no forma parte de la entrega
 /notas_personales/
 /F4/docs/guion_presentacion_f4.md
+# Archivos temporales de Microsoft Word
+~$*.docx

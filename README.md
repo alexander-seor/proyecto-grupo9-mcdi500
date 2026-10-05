@@ -4,7 +4,7 @@ Proyecto Grupo 9 — MCDI500
 **Grupo:** 9  
 **Estudiante:** Alexander Sepulveda Ormazabal
 
-Proyecto de análisis de datos reproducible y documentado, desarrollado con el **AI4I 2020 Predictive Maintenance Dataset**. El trabajo comprende la definición del problema, la comprensión y validación de los datos y, posteriormente, su exploración, preparación y modelamiento.
+Proyecto de análisis de datos reproducible y documentado, desarrollado con el **AI4I 2020 Predictive Maintenance Dataset**. El trabajo integra la definición del problema, la validación y preparación de los datos, la construcción de un pipeline modular, la medición de eficiencia y el análisis descriptivo final. No se entrenó un clasificador; los resultados identifican perfiles de interés y dejan una base preparada para una evaluación predictiva posterior.
 
 ## Integrantes
 
@@ -14,7 +14,7 @@ Proyecto de análisis de datos reproducible y documentado, desarrollado con el *
 
 Las fallas inesperadas en maquinaria industrial pueden generar interrupciones operacionales, pérdidas de productividad y mayores necesidades de mantenimiento. El dataset AI4I 2020 contiene información sobre distintas condiciones de operación de equipos, como temperatura, velocidad de rotación, torque y desgaste de herramienta, además del registro de ocurrencia de fallas.
 
-El proyecto buscará **identificar qué condiciones operacionales están asociadas con las fallas, reconocer posibles patrones de riesgo y posteriormente evaluar si estas variables permiten anticipar su ocurrencia.**
+El proyecto identifica **qué condiciones operacionales están asociadas con las fallas y qué perfiles concentran una mayor frecuencia observada**, manteniendo separada esta descripción de una evaluación predictiva futura.
 
 ## Pregunta de investigación
 
@@ -22,28 +22,105 @@ El proyecto buscará **identificar qué condiciones operacionales están asociad
 
 ## Objetivo y alcance
 
-Analizar la relación entre las condiciones operacionales y la ocurrencia de fallas, identificar posibles patrones de riesgo y evaluar posteriormente la capacidad predictiva de estas variables.
+Analizar la relación entre las condiciones operacionales y la ocurrencia de fallas, identificar perfiles descriptivos de mayor frecuencia y conservar una base reproducible para una evaluación predictiva posterior.
 
-La **Fase 1** se centra en definir y orientar el proyecto, organizar el entorno reproducible y comprender los datos. La exploración, preparación y evaluación de modelos se desarrollarán progresivamente en las siguientes entregas. Las asociaciones encontradas no se interpretarán por sí solas como relaciones causales.
+La **Fase 1** define el problema y el entorno; la **Fase 2** prepara los datos; la **Fase 3** convierte el flujo en módulos funcionales y orientados a objetos; y la **Fase 4** integra la evidencia, recupera valores interpretables y comunica los resultados. Las asociaciones encontradas no se interpretan como relaciones causales ni como desempeño predictivo.
 
 ## Estructura del proyecto
 
 ```text
 proyecto-grupo9-mcdi500/
+├── .gitattributes
+├── .gitignore
 ├── README.md
 ├── requirements.txt
-├── .gitignore
+├── changelog.md
 ├── F1/
 │   ├── data/
 │   │   ├── raw/
+│   │   │   ├── ai4i2020.csv
+│   │   │   └── metadata.csv
 │   │   └── processed/
 │   ├── notebooks/
+│   │   ├── F1_Definicion.ipynb
+│   │   └── validador.ipynb
 │   ├── docs/
+│   │   ├── F1_Definicion.html
+│   │   ├── validador.html
+│   │   ├── diccionario_variables.csv
+│   │   ├── evaluacion_criterios_dataset.csv
+│   │   ├── informe_dataset.md
+│   │   ├── mcdi500_s1_grupo9.pdf
+│   │   ├── metadatos_fase1.json
+│   │   └── vinculacion_mapa_conceptual.csv
 │   └── src/
+│       └── utilidades.py
 ├── F2/
+│   ├── F2_preprocesamiento.ipynb
+│   ├── data/
+│   │   └── processed/
+│   │       ├── ai4i2020_entrenamiento_procesado.csv
+│   │       └── ai4i2020_prueba_procesado.csv
+│   └── docs/
+│       ├── F2_preprocesamiento.html
+│       ├── diccionario_variables.csv
+│       ├── metadatos_proyecto.csv
+│       ├── metadatos_proyecto.json
+│       └── resumen_transformaciones.csv
 ├── F3/
-└── F4/
+│   ├── README.md
+│   ├── S2_F3_NucleoAlgoritmico_Eficiencia_POO.ipynb
+│   ├── data/
+│   │   └── processed/
+│   │       ├── ai4i2020_entrenamiento_procesado.csv
+│   │       ├── ai4i2020_prueba_procesado.csv
+│   │       ├── diccionario_f3.csv
+│   │       └── parametros_f3.csv
+│   ├── docs/
+│   │   ├── arquitectura_fase3.csv
+│   │   ├── comparacion_eficiencia.csv
+│   │   ├── crecimiento_temporal.csv
+│   │   ├── metadatos_fase3.csv
+│   │   └── metadatos_fase3.json
+│   └── src/
+│       ├── __init__.py
+│       ├── carga.py
+│       ├── fabrica.py
+│       ├── medicion.py
+│       ├── pipeline.py
+│       └── transformadores.py
+├── F4/
+│   ├── README.md
+│   ├── F4_Consolidado_Proyecto.ipynb
+│   ├── presentacion_f4_grupo9.pptx
+│   ├── data/
+│   │   └── processed/
+│   │       └── ai4i2020_visualizacion.csv
+│   ├── docs/
+│   │   ├── interaccion_operacional.csv
+│   │   ├── mapa_objetivos_figuras.csv
+│   │   ├── metadatos_fase4.json
+│   │   ├── resumen_objetivo.csv
+│   │   ├── resumen_variables_operacionales.csv
+│   │   ├── tasas_quintiles.csv
+│   │   ├── tasas_tipo_producto.csv
+│   │   ├── trazabilidad_mejoras.csv
+│   │   └── validacion_perfil.csv
+│   └── figuras/
+│       ├── figura_0_balance_objetivo.png
+│       ├── figura_1_tasa_por_tipo.png
+│       ├── figura_2_tasas_por_quintiles.png
+│       └── figura_3_interaccion_operacional.png
+├── Informe_Sumativa1_F1_F2_Grupo9.docx
+├── f1_s01_grupo9.pdf
+├── f3_s02_entregable_grupo9.docx
+├── f3_s02_entregable_grupo9.pdf
+├── informe_f4_grupo9.docx
+├── informe_f4_grupo9.pdf
+└── Untitled.ipynb
 ```
+
+El árbol omite únicamente archivos `.gitkeep`. `Untitled.ipynb` está vacío y no forma parte del flujo de ejecución; se conserva por ahora para no eliminar un archivo versionado sin una revisión explícita.
 
 | Ruta | Propósito |
 | --- | --- |
@@ -233,12 +310,14 @@ El README orienta la ejecución; los notebooks explican el análisis y `F1/docs/
 - [Mapa conceptual de la Formativa 1](F1/docs/mcdi500_s1_grupo9.pdf).
 - [Informe de validación del dataset](F1/docs/informe_dataset.md).
 
-### Comprobaciones pendientes del repositorio
+### Comprobaciones finales del repositorio
 
-- Añadir `.venv/`, `__pycache__/` y `*.pyc` a `.gitignore`; la versión revisada solo excluye `.ipynb_checkpoints/`.
-- Comprobar si esos archivos ya están versionados: añadirlos a `.gitignore` no elimina su seguimiento previo.
-- Verificar la instalación en macOS/Linux antes de afirmar compatibilidad: el listado actual incluye `pywinpty` sin un marcador de plataforma.
-- Incorporar la definición narrativa al notebook `F1_Definicion.ipynb` y comprobar la ejecución completa desde un kernel limpio.
+- [x] `.venv/`, `__pycache__/`, `*.pyc` y checkpoints están excluidos mediante `.gitignore`.
+- [x] Los datos originales permanecen separados de los productos procesados.
+- [x] Los notebooks principales fueron ejecutados con salidas visibles y sin errores pendientes.
+- [x] F1–F4 contienen documentación, metadatos y evidencia verificable.
+- [x] El README describe el orden de ejecución y los productos finales.
+- [x] El historial de Git y `changelog.md` relacionan las mejoras con commits reales.
 
 ## Control de versiones y colaboración
 
@@ -249,7 +328,7 @@ Por ejemplo, para registrar una actualización de este documento:
 ```bash
 git status
 git add README.md
-git commit -m "docs: actualiza problemática y reproducibilidad del Grupo 9"
+git commit -m "actualiza documentacion y reproducibilidad del proyecto"
 git push
 ```
 
@@ -257,27 +336,11 @@ Para otras tareas, seleccionar los archivos correspondientes con `git add`.
 
 ### Convención de commits
 
-Usar el formato `prefijo: descripción breve del cambio`.
+Los mensajes describen en español una tarea concreta, por ejemplo: `completa preprocesamiento de la fase 2`, `documenta eficiencia y arquitectura de la fase 3` o `actualiza trazabilidad del proyecto`. Antes de cada commit se revisan los archivos preparados y se comprueba que no existan salidas temporales o datos personales.
 
-| Prefijo | Uso | Ejemplo |
-| --- | --- | --- |
-| `docs` | Documentación y explicaciones. | `docs: documenta clasificación de variables AI4I` |
-| `data` | Incorporación o transformación de datos. | `data: incorpora dataset original AI4I` |
-| `feat` | Nueva funcionalidad o código de análisis. | `feat: agrega validación de columnas` |
-| `fix` | Corrección de errores. | `fix: corrige ruta de carga del CSV` |
+### Contribución individual y trabajo colaborativo
 
-Acordar tareas y responsables, revisar los cambios antes de integrarlos y documentar decisiones relevantes. El historial debe permitir relacionar las modificaciones de datos, código y documentación con los resultados del análisis.
-
-### Práctica de resolución de conflictos
-
-Actividad pendiente de realizar conjuntamente en un archivo de prueba:
-
-1. Crear y registrar un archivo de prueba con una línea de texto común.
-2. Crear dos ramas desde ese mismo commit y modificar la misma línea de manera distinta en cada rama.
-3. Intentar integrar una rama en la otra para provocar el conflicto.
-4. Revisar juntos ambas versiones, acordar el contenido final y eliminar los marcadores de conflicto.
-5. Preparar el archivo resuelto con `git add`, completar el commit y comprobar con `git status` que no queden conflictos.
-6. Guardar en `F1/docs/` una evidencia del conflicto, la resolución acordada y el identificador del commit.
+El proyecto fue desarrollado por un solo estudiante con autorización del docente. Por esa razón, el historial registra una contribución individual y no se simulan ramas, revisiones ni conflictos entre integrantes inexistentes. En un equipo, el flujo equivalente utilizaría una rama por tarea, revisión de cambios y posterior integración a `main`.
 
 ## Decisiones técnicas
 
@@ -291,15 +354,15 @@ Las siguientes decisiones orientan el trabajo; no implican que todas las transfo
 | Excluir `UDI` y `Product ID` de los predictores. | Evitar utilizar identificadores como señales operacionales. |
 | Excluir TWF, HDF, PWF, OSF y RNF de los predictores. | Evitar fuga de información desde indicadores relacionados con la falla objetivo. |
 | Conservar el notebook junto con una exportación HTML. | Mantener una versión ejecutable y otra de consulta. |
-| Evaluar posteriormente el desbalance y separar entrenamiento y prueba. | Evitar conclusiones engañosas y evaluar sobre datos no usados para ajustar el modelo. |
+| Separar entrenamiento y prueba antes de ajustar transformaciones. | Evitar fuga de información y mantener una comprobación separada. |
 
 Actualizar este registro al tomar nuevas decisiones, indicando su motivo y la evidencia que las respalda. Revisar el README al cerrar cada fase.
 
-## Proyección del trabajo
+## Limitaciones y trabajo futuro
 
-El análisis posterior explorará distribuciones, relaciones entre variables y diferencias entre registros con y sin falla. A continuación, se evaluarán alternativas de preparación y modelamiento.
+AI4I 2020 es sintético, presenta una clase positiva poco frecuente y no representa una planta específica. Los cuantiles y el perfil combinado describen este conjunto; no son límites industriales ni demuestran causalidad. La prueba se utilizó para una confirmación descriptiva después de la exploración, por lo que no corresponde interpretarla como una validación predictiva.
 
-En la evaluación predictiva se considerarán el balance de clases, la separación entre entrenamiento y prueba, el control de fuga de información y semillas reproducibles. Las transformaciones que aprendan de los datos se ajustarán únicamente con el conjunto de entrenamiento.
+El trabajo futuro consiste en contrastar los hallazgos con datos reales de mantenimiento, definir un clasificador antes de examinar su conjunto de validación y evaluar sensibilidad, precisión, F1 y PR-AUC. Las transformaciones deberán continuar ajustándose únicamente con entrenamiento.
 
 ## Referencias
 
@@ -311,7 +374,7 @@ Novak, J. D., & Cañas, A. J. (2008). *The theory underlying concept maps and ho
 
 ## Actualización del avance F1–F2
 
-Esta sección complementa el registro inicial del README con la implementación realizada posteriormente. Las listas y proyecciones anteriores se conservan como evidencia de la planificación original; el estado actualizado se presenta a continuación.
+Esta sección conserva el detalle técnico de la implementación realizada en F1 y F2. El estado final y la estructura vigente se presentan al inicio del documento.
 
 ### Objetivos específicos actualizados
 
@@ -571,6 +634,7 @@ un modelo ni estima capacidad predictiva.
 F4/
 ├── F4_Consolidado_Proyecto.ipynb
 ├── README.md
+├── presentacion_f4_grupo9.pptx
 ├── data/
 │   └── processed/
 │       └── ai4i2020_visualizacion.csv
